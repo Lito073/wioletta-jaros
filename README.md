@@ -113,11 +113,10 @@ CONTACT_EMAIL=info@wiolettajaros.nl
 | | |
 |--|--|
 | **Naam** | Wioletta Jaros Schoonmaakbedrijf V.O.F. |
-| **Adres** | Danksewei 11, 4261 ME Wijk en Aalburg |
+| **Adres** | Donksewaard 11, 4261 ME Wijk en Aalburg |
 | **Telefoon** | 06-27 08 23 83 |
 | **E-mail** | info@wiolettajaros.nl |
 | **KvK** | 65539508 |
-| **IBAN** | NL34 RABO 0152 6459 18 |
 | **Website** | www.wiolettajaros.nl |
 
 ## Werkgebied
