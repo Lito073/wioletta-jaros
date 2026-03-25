@@ -11,17 +11,14 @@ const usps = [
 
 export function AboutPreview() {
   return (
-    <section className="py-20 lg:py-28 relative overflow-hidden">
-      {/* Background accent */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
-
+    <section className="py-20 lg:py-28 relative overflow-hidden bg-white">
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Schoonmaak met een{" "}
-              <span className="text-gradient">persoonlijk gezicht</span>
+              <span className="text-foreground/80">persoonlijk gezicht</span>
             </h2>
 
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
@@ -38,7 +35,7 @@ export function AboutPreview() {
             <ul className="space-y-3 mb-8">
               {usps.map((usp, index) => (
                 <li key={index} className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-foreground flex-shrink-0" />
                   <span className="text-foreground">{usp}</span>
                 </li>
               ))}
@@ -47,7 +44,7 @@ export function AboutPreview() {
             <Button
               asChild
               variant="outline"
-              className="border-border text-foreground hover:bg-secondary"
+              className="border-[#e5e5e5] text-foreground hover:bg-[#f8f8f8]"
             >
               <Link href="/over-ons">
                 Lees ons verhaal
@@ -61,7 +58,7 @@ export function AboutPreview() {
             <div className="glass-card rounded-2xl p-8 lg:p-10">
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-[#f5f5f5] flex items-center justify-center">
                     <span className="text-3xl">✨</span>
                   </div>
                   <div>
@@ -72,7 +69,7 @@ export function AboutPreview() {
                   </div>
                 </div>
 
-                <div className="h-px bg-border" />
+                <div className="h-px bg-[#e5e5e5]" />
 
                 <blockquote className="text-foreground italic">
                   "Wij zorgen voor rust, structuur en zichtbare kwaliteit in uw pand,
@@ -80,7 +77,7 @@ export function AboutPreview() {
                 </blockquote>
 
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-sm font-semibold text-foreground">
+                  <div className="w-10 h-10 rounded-full bg-[#f5f5f5] flex items-center justify-center text-sm font-semibold text-foreground">
                     WJ
                   </div>
                   <div>
@@ -94,10 +91,6 @@ export function AboutPreview() {
                 </div>
               </div>
             </div>
-
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
           </div>
         </div>
       </div>

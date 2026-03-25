@@ -40,7 +40,7 @@ const services = [
 
 export function ServicesPreview() {
   return (
-    <section className="py-20 lg:py-28">
+    <section className="py-20 lg:py-28 bg-[#f5f5f5]">
       <div className="container mx-auto px-4">
         {/* Section header */}
         <div className="text-center mb-12">
@@ -59,16 +59,16 @@ export function ServicesPreview() {
             <Link
               key={service.title}
               href={service.href}
-              className="group glass-card rounded-xl p-6 hover:border-primary/30 transition-all duration-300"
+              className="group glass-card rounded-xl p-6 hover:border-[#1a1a1a]/20 transition-all duration-300"
             >
               <div className="flex flex-col h-full">
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
-                  <service.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-lg bg-[#e5e5e5] flex items-center justify-center mb-4 group-hover:bg-[#1a1a1a]/10 transition-colors duration-300">
+                  <service.icon className="w-6 h-6 text-foreground" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-foreground/80 transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-sm text-muted-foreground flex-grow">
@@ -76,7 +76,7 @@ export function ServicesPreview() {
                 </p>
 
                 {/* Link */}
-                <span className="text-sm text-primary mt-4 flex items-center gap-1 group-hover:gap-2 transition-all duration-300">
+                <span className="text-sm text-foreground mt-4 flex items-center gap-1 group-hover:gap-2 transition-all duration-300">
                   Meer lezen
                   <span>→</span>
                 </span>
@@ -90,7 +90,7 @@ export function ServicesPreview() {
           <Button
             asChild
             variant="outline"
-            className="border-border text-foreground hover:bg-secondary"
+            className="border-[#e5e5e5] text-foreground hover:bg-[#f8f8f8]"
           >
             <Link href="/diensten">
               Bekijk alle diensten

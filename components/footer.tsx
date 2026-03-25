@@ -19,7 +19,7 @@ const werkgebied = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-background">
+    <footer className="border-t border-[#e5e5e5] bg-[#f5f5f5]">
       <div className="container mx-auto px-4 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Kolom 1: Logo + Omschrijving */}
@@ -73,7 +73,7 @@ export function Footer() {
             </h3>
             <div className="flex flex-col gap-3 text-sm text-muted-foreground">
               <address className="not-italic">
-                Danksewei 11
+                Donksewaard 11
                 <br />
                 4261 ME Wijk en Aalburg
               </address>
@@ -101,7 +101,7 @@ export function Footer() {
               {werkgebied.map((plaats) => (
                 <span
                   key={plaats}
-                  className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground border border-border"
+                  className="text-xs px-3 py-1 rounded-full bg-white text-muted-foreground border border-[#e5e5e5]"
                 >
                   {plaats}
                 </span>
@@ -111,13 +111,13 @@ export function Footer() {
         </div>
 
         {/* Onderkant balk */}
-        <div className="mt-12 pt-8 border-t border-border">
+        <div className="mt-12 pt-8 border-t border-[#e5e5e5]">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
             <p>
               © {new Date().getFullYear()} Wioletta Jaros Schoonmaakbedrijf V.O.F.
             </p>
             <p>
-              KvK: 65539508 · IBAN: NL34 RABO 0152 6459 18
+              KvK: 65539508
             </p>
           </div>
         </div>

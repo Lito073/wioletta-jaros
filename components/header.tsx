@@ -37,7 +37,7 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "glass py-3"
+          ? "bg-[#1a1a1a]/95 backdrop-blur-sm py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -52,10 +52,10 @@ export function Header() {
             className="transition-transform duration-300 group-hover:scale-105"
           />
           <div className="flex flex-col">
-            <span className="text-lg font-semibold text-foreground tracking-tight">
+            <span className="text-lg font-semibold text-white tracking-tight">
               Wioletta Jaros
             </span>
-            <span className="text-xs text-muted-foreground">
+            <span className="text-xs text-white/70">
               Schoonmaakbedrijf
             </span>
           </div>
@@ -67,17 +67,17 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 relative group"
+              className="text-sm text-white/70 hover:text-white transition-colors duration-300 relative group"
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/50 transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
         </nav>
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button asChild variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90">
+          <Button asChild variant="default" className="bg-white text-[#1a1a1a] hover:bg-white/90">
             <Link href="/contact">
               Offerte aanvragen
               <span className="ml-1">→</span>
@@ -88,14 +88,14 @@ export function Header() {
         {/* Mobile Menu */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" className="text-foreground">
+            <Button variant="ghost" size="icon" className="text-white">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Menu openen</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="glass border-l border-border">
+          <SheetContent side="right" className="bg-[#1a1a1a] border-l border-white/10">
             <SheetHeader className="text-left">
-              <SheetTitle className="text-foreground">Menu</SheetTitle>
+              <SheetTitle className="text-white">Menu</SheetTitle>
             </SheetHeader>
             <nav className="flex flex-col gap-4 mt-8">
               {navLinks.map((link) => (
@@ -103,7 +103,7 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-lg text-foreground hover:text-accent transition-colors duration-300 py-2"
+                  className="text-lg text-white hover:text-white/70 transition-colors duration-300 py-2"
                 >
                   {link.label}
                 </Link>
@@ -111,7 +111,7 @@ export function Header() {
               <Button
                 asChild
                 variant="default"
-                className="mt-4 bg-primary text-primary-foreground"
+                className="mt-4 bg-white text-[#1a1a1a]"
               >
                 <Link href="/contact" onClick={() => setIsOpen(false)}>
                   Offerte aanvragen →

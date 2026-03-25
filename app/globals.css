@@ -49,81 +49,85 @@
 }
 
 :root {
-  /* Dark chromic glassmorphism thema - PRD specificaties */
-  --background: #0a0a0a;
-  --foreground: #f5f5f5;
-  --card: rgba(255, 255, 255, 0.05);
-  --card-foreground: #f5f5f5;
-  --popover: rgba(255, 255, 255, 0.05);
-  --popover-foreground: #f5f5f5;
-  --primary: #c0c0c0;
-  --primary-foreground: #0a0a0a;
-  --secondary: rgba(255, 255, 255, 0.08);
-  --secondary-foreground: #f5f5f5;
-  --muted: rgba(255, 255, 255, 0.05);
-  --muted-foreground: rgba(255, 255, 255, 0.55);
-  --accent: #c0c0c0;
-  --accent-foreground: #0a0a0a;
+  /* Licht thema */
+  --background: #ffffff;
+  --background-alt: #f5f5f5;
+  --foreground: #1a1a1a;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  --primary: #1a1a1a;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #1a1a1a;
+  --muted: #f5f5f5;
+  --muted-foreground: #6b7280;
+  --accent: #1a1a1a;
+  --accent-foreground: #ffffff;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: rgba(255, 255, 255, 0.10);
-  --input: rgba(255, 255, 255, 0.10);
-  --ring: rgba(192, 192, 192, 0.5);
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: rgba(26, 26, 26, 0.3);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
   --radius: 0.625rem;
-  --sidebar: rgba(255, 255, 255, 0.05);
-  --sidebar-foreground: #f5f5f5;
-  --sidebar-primary: #c0c0c0;
-  --sidebar-primary-foreground: #0a0a0a;
-  --sidebar-accent: rgba(255, 255, 255, 0.08);
-  --sidebar-accent-foreground: #f5f5f5;
-  --sidebar-border: rgba(255, 255, 255, 0.10);
-  --sidebar-ring: rgba(192, 192, 192, 0.5);
+  --sidebar: #f5f5f5;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #1a1a1a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e5e5e5;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: rgba(26, 26, 26, 0.3);
 
-  /* Custom glassmorphism variables */
-  --surface: rgba(255, 255, 255, 0.05);
-  --surface-hover: rgba(255, 255, 255, 0.08);
-  --accent-glow: rgba(192, 192, 192, 0.15);
-  --glass-blur: blur(10px) saturate(180%);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.30);
+  /* Custom variables voor licht thema */
+  --surface: #ffffff;
+  --surface-hover: #f8f8f8;
+
+  /* Donkere navbar variabelen */
+  --navbar-bg: #1a1a1a;
+  --navbar-text: #ffffff;
+  --navbar-text-muted: rgba(255, 255, 255, 0.7);
 }
 
 .dark {
-  /* Zelfde als :root - altijd dark theme */
-  --background: #0a0a0a;
-  --foreground: #f5f5f5;
-  --card: rgba(255, 255, 255, 0.05);
-  --card-foreground: #f5f5f5;
-  --popover: rgba(255, 255, 255, 0.05);
-  --popover-foreground: #f5f5f5;
-  --primary: #c0c0c0;
-  --primary-foreground: #0a0a0a;
-  --secondary: rgba(255, 255, 255, 0.08);
-  --secondary-foreground: #f5f5f5;
-  --muted: rgba(255, 255, 255, 0.05);
-  --muted-foreground: rgba(255, 255, 255, 0.55);
-  --accent: #c0c0c0;
-  --accent-foreground: #0a0a0a;
+  /* Licht thema - zelfde als :root */
+  --background: #ffffff;
+  --background-alt: #f5f5f5;
+  --foreground: #1a1a1a;
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+  --primary: #1a1a1a;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #1a1a1a;
+  --muted: #f5f5f5;
+  --muted-foreground: #6b7280;
+  --accent: #1a1a1a;
+  --accent-foreground: #ffffff;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: rgba(255, 255, 255, 0.10);
-  --input: rgba(255, 255, 255, 0.15);
-  --ring: rgba(192, 192, 192, 0.5);
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: rgba(26, 26, 26, 0.3);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --sidebar: rgba(255, 255, 255, 0.05);
-  --sidebar-foreground: #f5f5f5;
-  --sidebar-primary: #c0c0c0;
-  --sidebar-primary-foreground: #0a0a0a;
-  --sidebar-accent: rgba(255, 255, 255, 0.08);
-  --sidebar-accent-foreground: #f5f5f5;
-  --sidebar-border: rgba(255, 255, 255, 0.10);
-  --sidebar-ring: rgba(192, 192, 192, 0.5);
+  --sidebar: #f5f5f5;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #1a1a1a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e5e5e5;
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: rgba(26, 26, 26, 0.3);
 }
 
 @layer base {
@@ -138,37 +142,34 @@
   }
 }
 
-/* Glassmorphism utility classes */
+/* Card utility classes voor licht thema */
 @layer utilities {
   .glass {
     background: var(--surface);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
     border: 1px solid var(--border);
-    box-shadow: var(--glass-shadow);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   }
 
   .glass-card {
     background: var(--surface);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
     border: 1px solid var(--border);
-    box-shadow: var(--glass-shadow);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: var(--radius-lg);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .glass-card:hover {
     background: var(--surface-hover);
-    border-color: rgba(255, 255, 255, 0.15);
+    border-color: #d4d4d4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   .chrome-glow {
-    box-shadow: 0 0 40px var(--accent-glow);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #f5f5f5 0%, #c0c0c0 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
