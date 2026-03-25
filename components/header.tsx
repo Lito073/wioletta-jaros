@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 import {
   Sheet,
   SheetContent,
@@ -11,7 +11,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Menu, X, Phone, Mail } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -22,105 +23,108 @@ const navLinks = [
 ];
 
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const pathname = usePathname();
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-[#1a1a1a]/95 backdrop-blur-sm py-3"
-          : "bg-transparent py-5"
-      }`}
-    >
-      <div className="container mx-auto px-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <Image
-            src="/assets/logo.png"
-            alt="Wioletta Jaros Logo"
-            width={40}
-            height={40}
-            className="transition-transform duration-300 group-hover:scale-105"
-          />
-          <div className="flex flex-col">
-            <span className="text-lg font-semibold text-white tracking-tight">
-              Wioletta Jaros
-            </span>
-            <span className="text-xs text-white/70">
-              Schoonmaakbedrijf
-            </span>
-          </div>
-        </Link>
+    <header className="fixed top-0 left-0 right-0 z-50">
+      {/* BLOK 1 - Donker met logo en contact info */}
+      <div className="bg-[#1a1a1a] relative h-16">
+        <div className="container mx-auto px-4 h-full flex items-center justify-between">
+          {/* Logo - steekt uit over blok 2 */}
+          <Link
+            href="/"
+            className="absolute bottom-[-20px] z-10 flex items-center gap-3 group"
+          >
+            <Image
+              src="/assets/logo.svg"
+              alt="Wioletta Jaros Logo"
+              width={50}
+              height={50}
+              className="transition-transform duration-300 group-hover:scale-105"
+            />
+          </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm text-white/70 hover:text-white transition-colors duration-300 relative group"
+          {/* Contact info - alleen op desktop */}
+          <div className="hidden md:flex items-center gap-6 ml-auto text-white/80 text-sm">
+            <a
+              href="tel:0627082383"
+              className="flex items-center gap-2 hover:text-white transition-colors"
             >
-              {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white/50 transition-all duration-300 group-hover:w-full" />
-            </Link>
-          ))}
-        </nav>
+              <Phone className="h-4 w-4" />
+              <span>06-27 08 23 83</span>
+            </a>
+            <a
+              href="mailto:info@wiolettajaros.nl"
+              className="flex items-center gap-2 hover:text-white transition-colors"
+            >
+              <Mail className="h-4 w-4" />
+              <span>info@wiolettajaros.nl</span>
+            </a>
+          </div>
 
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <Button asChild variant="default" className="bg-white text-[#1a1a1a] hover:bg-white/90">
-            <Link href="/contact">
-              Offerte aanvragen
-              <span className="ml-1">→</span>
-            </Link>
-          </Button>
+          {/* Mobile hamburger - rechts uitgelijnd */}
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild className="md:hidden ml-auto">
+              <Button variant="ghost" size="icon" className="text-white">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Menu openen</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent
+              side="right"
+              className="bg-[#1a1a1a] border-l border-white/10"
+            >
+              <SheetHeader className="text-left">
+                <SheetTitle className="text-white">Menu</SheetTitle>
+              </SheetHeader>
+              <nav className="flex flex-col gap-4 mt-8">
+                {navLinks.map((link) => {
+                  const isActive = pathname === link.href;
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className={`text-lg transition-colors duration-300 py-2 ${
+                        isActive
+                          ? "text-white font-bold underline underline-offset-4"
+                          : "text-white/70 hover:text-white"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                })}
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
+      </div>
 
-        {/* Mobile Menu */}
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" className="text-white">
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Menu openen</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="right" className="bg-[#1a1a1a] border-l border-white/10">
-            <SheetHeader className="text-left">
-              <SheetTitle className="text-white">Menu</SheetTitle>
-            </SheetHeader>
-            <nav className="flex flex-col gap-4 mt-8">
-              {navLinks.map((link) => (
+      {/* BLOK 2 - Wit met navigatie */}
+      <nav className="hidden md:block bg-white border-b border-[#e5e5e5]">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center pl-[70px] h-12">
+            {navLinks.map((link, index) => {
+              const isActive = pathname === link.href;
+              return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-lg text-white hover:text-white/70 transition-colors duration-300 py-2"
+                  className={`text-sm transition-colors duration-300 px-4 py-1 ${
+                    isActive
+                      ? "text-[#1a1a1a] font-bold underline underline-offset-4 decoration-[#1a1a1a]"
+                      : "text-[#1a1a1a]/70 hover:text-[#1a1a1a]"
+                  }`}
                 >
                   {link.label}
                 </Link>
-              ))}
-              <Button
-                asChild
-                variant="default"
-                className="mt-4 bg-white text-[#1a1a1a]"
-              >
-                <Link href="/contact" onClick={() => setIsOpen(false)}>
-                  Offerte aanvragen →
-                </Link>
-              </Button>
-            </nav>
-          </SheetContent>
-        </Sheet>
-      </div>
+              );
+            })}
+          </div>
+        </div>
+      </nav>
     </header>
   );
 }
