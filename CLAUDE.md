@@ -94,7 +94,7 @@ vercel env pull .env.local --yes
 
 ## Bedrijfsgegevens (altijd correct houden)
 - Naam: Wioletta Jaros Schoonmaakbedrijf V.O.F.
-- Adres: Danksewei 11, 4261 ME Wijk en Aalburg
+- Adres: Donksewaard 11, 4261 ME Wijk en Aalburg
 - Tel: 06-27 08 23 83
 - Email: info@wiolettajaros.nl
 - KvK: 65539508

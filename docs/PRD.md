@@ -117,7 +117,7 @@ Contact
 
 Kolom 3 — Contact
 ──────────────────────────────
-Danksewei 11
+Donksewaard 11
 4261 ME Wijk en Aalburg
 
 Tel: 06-27 08 23 83
@@ -445,7 +445,7 @@ CTA button: → Ontvang een offerte op maat
 ```
 Wioletta Jaros Schoonmaakbedrijf V.O.F.
 
-📍 Danksewei 11, 4261 ME Wijk en Aalburg
+📍 Donksewaard 11, 4261 ME Wijk en Aalburg
 📞 06-27 08 23 83
 ✉️ info@wiolettajaros.nl
 
@@ -565,7 +565,7 @@ Werkwijze: logo's ophalen van bedrijfswebsites
   "@type": "LocalBusiness",
   "name": "Wioletta Jaros Schoonmaakbedrijf V.O.F.",
   "address": {
-    "streetAddress": "Danksewei 11",
+    "streetAddress": "Donksewaard 11",
     "postalCode": "4261 ME",
     "addressLocality": "Wijk en Aalburg",
     "addressCountry": "NL"
