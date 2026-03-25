@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wioletta Jaros Schoonmaakbedrijf
 
-## Getting Started
+Zakelijke website voor **Wioletta Jaros Schoonmaakbedrijf V.O.F.** — een schoonmaakbedrijf actief in regio Altena en omgeving. De website richt zich op zakelijke klanten met als primair doel: offerte aanvragen genereren.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+| Onderdeel | Technologie |
+|-----------|-------------|
+| Framework | Next.js 16 (App Router) |
+| Taal | TypeScript (strict) |
+| Styling | Tailwind CSS |
+| Components | shadcn/ui |
+| Hosting | Vercel |
+| Mail | Resend |
+| Vacatures CMS | Google Sheets API |
+
+## Pagina's
+
+| Route | Beschrijving |
+|-------|--------------|
+| `/` | Homepage met hero, diensten preview, client logos |
+| `/over-ons` | Verhaal, missie, oprichters, werkgebied |
+| `/diensten` | Alle diensten: kantoorschoonmaak, vloeronderhoud, glasbewassing, bouwschoonmaak |
+| `/contact` | Offerteformulier |
+| `/vacatures` | Vacatures via Google Sheets |
+
+## Design Systeem
+
+**Stijl:** Dark chromic glassmorphism — professioneel, strak, vertrouwenwekkend.
+
+**Kleurpalet:**
+- Background: `#0a0a0a`
+- Surface: `rgba(255, 255, 255, 0.05)`
+- Accent: `#c0c0c0` (zilver/chrome)
+- Text primary: `#f5f5f5`
+- Text muted: `rgba(255, 255, 255, 0.55)`
+
+**Typografie:** Display/headlines elegant en karaktervol. Alle website tekst in het Nederlands.
+
+## Project Structuur
+
+```
+wioletta-jaros/
+├── app/
+│   ├── layout.tsx          # Root layout
+│   ├── page.tsx            # Homepage
+│   ├── globals.css         # Global styles
+│   └── (pages)/            # Route group
+│       ├── over-ons/
+│       ├── diensten/
+│       ├── contact/
+│       └── vacatures/
+├── components/
+│   └── ui/                 # shadcn/ui componenten
+├── public/
+│   └── assets/             # Logo's, afbeeldingen
+├── docs/
+│   └── PRD.md              # Product Requirements Document
+└── next.config.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Install dependencies
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Start development server
+npm run dev
 
-## Learn More
+# Build for production
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# Start production server
+npm run start
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Lint code
+npm run lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open [http://localhost:3000](http://localhost:3000) om de site te bekijken.
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+De site wordt automatisch gedeployed naar Vercel bij push naar `master`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# Handmatig deployen naar productie
+vercel --prod --yes
+
+# Environment variables pullen
+vercel env pull .env.local --yes
+```
+
+**Productie URL:** https://wioletta-jaros.vercel.app
+
+## Environment Variables
+
+```bash
+# Resend (mail versturen)
+RESEND_API_KEY=
+
+# Google Sheets (vacatures)
+GOOGLE_SHEETS_API_KEY=
+GOOGLE_SHEETS_ID=
+
+# Mail ontvanger
+CONTACT_EMAIL=info@wiolettajaros.nl
+```
+
+## Bedrijfsgegevens
+
+| | |
+|--|--|
+| **Naam** | Wioletta Jaros Schoonmaakbedrijf V.O.F. |
+| **Adres** | Danksewei 11, 4261 ME Wijk en Aalburg |
+| **Telefoon** | 06-27 08 23 83 |
+| **E-mail** | info@wiolettajaros.nl |
+| **KvK** | 65539508 |
+| **IBAN** | NL34 RABO 0152 6459 18 |
+| **Website** | www.wiolettajaros.nl |
+
+## Werkgebied
+
+Wijk en Aalburg · Hedel · Kerkdriel · Den Bosch · Waalwijk · Werkendam
+
+## Documentatie
+
+- [PRD.md](docs/PRD.md) — Volledige product specificatie
+- [CLAUDE.md](CLAUDE.md) — Project instructies voor Claude Code
