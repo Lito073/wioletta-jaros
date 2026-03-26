@@ -21,50 +21,48 @@ export function Header() {
 
   return (
     <header className="fixed top-0 right-0 left-0 z-50">
-      {/* BLOK 1 - Donker met logo en contact info */}
-      <div className="relative h-16 bg-[#1a1a1a]">
-        <div className="container mx-auto flex h-full items-center justify-between px-4">
-          {/* Logo en bedrijfsnaam - steekt uit over blok 2 */}
+      <div className="bg-[#1a1a1a]">
+        <div className="container mx-auto grid h-20 grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 md:h-[88px] md:grid-cols-[minmax(0,280px)_1fr_180px] md:gap-6 lg:grid-cols-[minmax(0,300px)_1fr_300px]">
           <Link
             href="/"
-            className="group absolute bottom-[-28px] z-10 flex items-center gap-3"
+            className="group flex min-w-0 items-center gap-3 self-center md:gap-4"
           >
             <Image
               src="/assets/logo.svg"
               alt="Wioletta Jaros Logo"
               width={90}
               height={90}
-              className="h-[60px] w-auto transition-transform duration-300 group-hover:scale-105 md:h-[90px]"
+              className="h-14 w-auto shrink-0 transition-transform duration-300 group-hover:scale-105 md:h-[72px] lg:h-[76px]"
             />
-            <div className="mb-2 flex flex-col justify-center">
-              <span className="text-lg font-semibold text-white">
+            <div className="flex min-w-0 flex-col justify-center pt-0.5">
+              <span className="truncate text-[1.05rem] leading-none font-semibold text-white md:text-[1.7rem]">
                 Wioletta Jaros
               </span>
-              <span className="text-sm text-white/75">
+              <span className="truncate pt-1 text-[0.72rem] leading-[1.05] text-white/75 md:pt-1.5 md:text-sm md:leading-tight">
                 Schoonmaakbedrijf V.O.F.
               </span>
             </div>
           </Link>
 
-          {/* Contact info - alleen op desktop */}
-          <div className="ml-auto hidden items-center gap-6 text-sm text-white/80 md:flex">
+          <div className="hidden md:block" aria-hidden="true" />
+
+          <div className="ml-auto hidden items-center justify-end gap-4 text-sm text-white/80 md:flex">
             <a
               href="tel:0627082383"
-              className="flex items-center gap-2 transition-colors hover:text-white"
+              className="flex items-center gap-2 whitespace-nowrap transition-colors hover:text-white"
             >
               <Phone className="h-4 w-4" />
               <span>06-27 08 23 83</span>
             </a>
             <a
-              href="mailto:info@wiolettajaros.nl"
-              className="flex items-center gap-2 transition-colors hover:text-white"
+              href="mailto:hallo@wiolettajaros.nl"
+              className="hidden items-center gap-2 whitespace-nowrap transition-colors hover:text-white lg:flex"
             >
               <Mail className="h-4 w-4" />
-              <span>info@wiolettajaros.nl</span>
+              <span>hallo@wiolettajaros.nl</span>
             </a>
           </div>
 
-          {/* Mobile hamburger - rechts uitgelijnd */}
           <div className="ml-auto md:hidden">
             <Button
               variant="ghost"
@@ -83,17 +81,17 @@ export function Header() {
         </div>
       </div>
 
-      {/* BLOK 2 - Wit met navigatie */}
       <nav className="hidden border-b border-border bg-background md:block">
-        <div className="container mx-auto px-4">
-          <div className="flex h-12 items-center justify-center pl-[70px]">
+        <div className="container mx-auto grid h-14 grid-cols-[minmax(0,280px)_1fr_180px] items-center gap-6 px-4 lg:grid-cols-[minmax(0,300px)_1fr_300px]">
+          <div aria-hidden="true" />
+          <div className="flex items-center justify-center whitespace-nowrap">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-3 text-sm transition-colors duration-300 ${
+                  className={`px-3 py-3 text-sm transition-colors duration-300 lg:px-4 ${
                     isActive
                       ? "font-semibold text-foreground"
                       : "text-foreground/70 hover:text-foreground"
@@ -104,6 +102,7 @@ export function Header() {
               );
             })}
           </div>
+          <div aria-hidden="true" />
         </div>
       </nav>
 
@@ -112,7 +111,7 @@ export function Header() {
           <button
             type="button"
             aria-hidden="true"
-            className="fixed top-16 right-0 bottom-0 left-0 z-40 bg-black/45 md:hidden"
+            className="fixed top-20 right-0 bottom-0 left-0 z-40 bg-black/45 md:hidden"
             onClick={() => setIsOpen(false)}
           />
           <div
@@ -120,7 +119,7 @@ export function Header() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="mobile-menu-title"
-            className="fixed top-16 right-0 bottom-0 z-50 flex w-[85vw] max-w-sm flex-col border-l border-white/10 bg-primary p-4 md:hidden"
+            className="fixed top-20 right-0 bottom-0 z-50 flex w-[85vw] max-w-sm flex-col border-l border-white/10 bg-primary p-4 md:hidden"
           >
             <div className="flex items-center justify-between">
               <h2

@@ -105,7 +105,7 @@ GOOGLE_SHEETS_API_KEY=
 GOOGLE_SHEETS_ID=
 
 # Mail ontvanger
-CONTACT_EMAIL=info@wiolettajaros.nl
+CONTACT_EMAIL=hallo@wiolettajaros.nl
 ```
 
 ## Bedrijfsgegevens
@@ -115,7 +115,7 @@ CONTACT_EMAIL=info@wiolettajaros.nl
 | **Naam** | Wioletta Jaros Schoonmaakbedrijf V.O.F. |
 | **Adres** | Donksewaard 11, 4261 ME Wijk en Aalburg |
 | **Telefoon** | 06-27 08 23 83 |
-| **E-mail** | info@wiolettajaros.nl |
+| **E-mail** | hallo@wiolettajaros.nl |
 | **KvK** | 65539508 |
 | **Website** | www.wiolettajaros.nl |
 

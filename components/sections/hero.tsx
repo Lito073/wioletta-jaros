@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[88svh] items-center justify-center overflow-hidden pt-28 pb-20 md:min-h-[92vh] md:pt-32 md:pb-28">
+    <section className="relative flex min-h-[calc(100svh-4rem)] items-start justify-center overflow-hidden pt-24 pb-16 md:min-h-[calc(100vh-7rem)] md:pt-14 md:pb-16">
       {/* Fallback achtergrond */}
       <div className="absolute inset-0 bg-primary" />
 
@@ -23,7 +23,7 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 text-center">
-        <div className="mx-auto max-w-3xl space-y-6">
+        <div className="mx-auto max-w-3xl space-y-5 md:space-y-6">
           {/* Badge */}
           <div className="inline-flex max-w-3xl items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/80 backdrop-blur-sm">
             <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
@@ -42,7 +42,7 @@ export function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
+          <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
             Vaste gezichten, duidelijke afspraken en meetbare kwaliteit.
             <span className="block mt-2">
               Actief in Wijk en Aalburg, Hedel, Kerkdriel, Den Bosch, Waalwijk
@@ -51,7 +51,7 @@ export function Hero() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col justify-center gap-4 pt-3 sm:flex-row">
+          <div className="flex flex-col justify-center gap-4 pt-2 sm:flex-row">
             <Button
               asChild
               size="lg"

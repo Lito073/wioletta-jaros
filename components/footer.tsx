@@ -85,10 +85,10 @@ export function Footer() {
                 Tel: 06-27 08 23 83
               </a>
               <a
-                href="mailto:info@wiolettajaros.nl"
+                href="mailto:hallo@wiolettajaros.nl"
                 className="hover:text-foreground transition-colors duration-300"
               >
-                E-mail: info@wiolettajaros.nl
+                E-mail: hallo@wiolettajaros.nl
               </a>
             </div>
           </div>

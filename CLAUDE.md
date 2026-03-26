@@ -96,7 +96,7 @@ vercel env pull .env.local --yes
 - Naam: Wioletta Jaros Schoonmaakbedrijf V.O.F.
 - Adres: Donksewaard 11, 4261 ME Wijk en Aalburg
 - Tel: 06-27 08 23 83
-- Email: info@wiolettajaros.nl
+- Email: hallo@wiolettajaros.nl
 - KvK: 65539508
 - IBAN: NL34 RABO 0152 6459 18
 

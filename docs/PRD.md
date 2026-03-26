@@ -121,7 +121,7 @@ Donksewaard 11
 4261 ME Wijk en Aalburg
 
 Tel: 06-27 08 23 83
-E-mail: info@wiolettajaros.nl
+E-mail: hallo@wiolettajaros.nl
 
 Kolom 4 — Werkgebied
 ──────────────────────────────
@@ -447,7 +447,7 @@ Wioletta Jaros Schoonmaakbedrijf V.O.F.
 
 📍 Donksewaard 11, 4261 ME Wijk en Aalburg
 📞 06-27 08 23 83
-✉️ info@wiolettajaros.nl
+✉️ hallo@wiolettajaros.nl
 
 Werkgebied:
 Wijk en Aalburg · Hedel · Kerkdriel
@@ -457,7 +457,7 @@ Den Bosch · Waalwijk · Werkendam
 **9.4 Mail afhandeling (technisch)**
 ```
 Via: Resend API
-Naar: info@wiolettajaros.nl
+Naar: hallo@wiolettajaros.nl
 Onderwerp: Nieuwe offerteaanvraag — [Bedrijfsnaam]
 Route handler: app/api/contact/route.ts
 ```
@@ -501,7 +501,7 @@ Gedrag:
 **10.3 Geen vacatures beschikbaar (fallback)**
 ```
 Er zijn op dit moment geen openstaande vacatures.
-Stuur een open sollicitatie naar info@wiolettajaros.nl
+Stuur een open sollicitatie naar hallo@wiolettajaros.nl
 ```
 
 **10.4 Open sollicitatie sectie (altijd zichtbaar)**
@@ -510,7 +510,7 @@ Heading:  Staat uw functie er niet bij?
 Tekst:    Stuur ons een open sollicitatie.
           Wij zijn altijd op zoek naar betrouwbare mensen.
 CTA:      → Stuur een open sollicitatie
-          (mailto: info@wiolettajaros.nl?subject=Open sollicitatie)
+          (mailto: hallo@wiolettajaros.nl?subject=Open sollicitatie)
 ```
 
 ---
@@ -571,7 +571,7 @@ Werkwijze: logo's ophalen van bedrijfswebsites
     "addressCountry": "NL"
   },
   "telephone": "06-27 08 23 83",
-  "email": "info@wiolettajaros.nl",
+  "email": "hallo@wiolettajaros.nl",
   "url": "https://www.wiolettajaros.nl",
   "areaServed": [
     "Wijk en Aalburg", "Hedel", "Kerkdriel",
@@ -598,7 +598,7 @@ GOOGLE_SHEETS_API_KEY=
 GOOGLE_SHEETS_ID=
 
 # Mail ontvanger
-CONTACT_EMAIL=info@wiolettajaros.nl
+CONTACT_EMAIL=hallo@wiolettajaros.nl
 ```
 
 ---
@@ -625,7 +625,7 @@ CONTACT_EMAIL=info@wiolettajaros.nl
 Naam:    Wioletta Jaros Schoonmaakbedrijf V.O.F.
 Adres:   Donksewaard 11, 4261 ME Wijk en Aalburg
 Tel:     06-27 08 23 83
-Email:   info@wiolettajaros.nl
+Email:   hallo@wiolettajaros.nl
 KvK:     65539508
 IBAN:    NL34 RABO 0152 6459 18
 Web:     www.wiolettajaros.nl
