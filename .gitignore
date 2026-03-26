@@ -55,3 +55,13 @@ next-env.d.ts
 
 # Review/test screenshots in root
 *-check.png
+
+# AI tool configs (private)
+.claude/
+.agents/
+.codex/
+
+# Temporary files
+code_review.md
+PLANS.md
+Wioletta.jpeg
