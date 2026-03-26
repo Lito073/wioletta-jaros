@@ -10,7 +10,7 @@ export function Hero() {
 
       {/* Hero background image - local file for better performance and reliability */}
       <Image
-        src="/assets/clients/hero-cleaning.jpg"
+        src="/assets/hero-cleaning.jpg"
         alt=""
         fill
         priority
