@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[calc(100svh-8.25rem)] items-start justify-center overflow-hidden pt-18 pb-3 md:min-h-[calc(100vh-11rem)] md:pt-8 md:pb-1">
+    <section className="hero-home relative flex items-start justify-center overflow-hidden pt-18 pb-8">
       {/* Fallback achtergrond */}
       <div className="absolute inset-0 bg-primary" />
 
@@ -22,8 +22,8 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/70 z-10" />
 
       {/* Content */}
-      <div className="relative z-20 container mx-auto mt-6 px-4 text-center md:mt-10">
-        <div className="mx-auto max-w-3xl space-y-4 md:space-y-5">
+      <div className="relative z-20 container mx-auto mt-6 px-4 text-center md:mt-0">
+        <div className="mx-auto max-w-3xl space-y-5 md:space-y-6">
           {/* Heading */}
           <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
             Professioneel schoonmaakbedrijf
@@ -42,7 +42,7 @@ export function Hero() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col justify-center gap-3 sm:flex-row">
+          <div className="flex flex-col justify-center gap-4 pt-2 sm:flex-row">
             <Button
               asChild
               size="lg"

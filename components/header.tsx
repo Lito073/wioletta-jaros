@@ -34,11 +34,11 @@ export function Header() {
               height={90}
               className="h-14 w-auto shrink-0 translate-y-6 transition-transform duration-300 group-hover:scale-105 md:h-[72px] md:translate-y-5 lg:h-[76px] lg:translate-y-5"
             />
-            <div className="flex min-w-0 translate-y-0.5 flex-col justify-center pt-0.5 md:-translate-y-0.5">
-              <span className="truncate text-[1.05rem] leading-none font-semibold text-white md:text-[1.7rem]">
+            <div className="flex min-w-0 translate-y-1 flex-col justify-center md:translate-y-0">
+              <span className="truncate text-[1.08rem] leading-none font-bold tracking-[-0.035em] text-[var(--navbar-text)] md:text-[1.78rem]">
                 Wioletta Jaros
               </span>
-              <span className="truncate pt-1 text-[0.72rem] leading-[1.05] text-white/75 md:pt-1.5 md:text-sm md:leading-tight">
+              <span className="truncate pt-1 text-[0.76rem] leading-[1.1] font-semibold tracking-[0.01em] text-[color:rgba(255,255,255,0.9)] md:pt-1.5 md:text-[0.95rem] md:leading-tight">
                 Schoonmaakbedrijf V.O.F.
               </span>
             </div>
@@ -46,19 +46,19 @@ export function Header() {
 
           <div className="hidden md:block" aria-hidden="true" />
 
-          <div className="ml-auto hidden items-center justify-end gap-4 text-sm text-white/80 md:flex">
+          <div className="ml-auto hidden items-center justify-end gap-4 text-[0.95rem] font-medium text-[color:rgba(255,255,255,0.92)] md:flex">
             <a
               href="tel:0627082383"
-              className="flex items-center gap-2 whitespace-nowrap transition-colors hover:text-white"
+              className="flex items-center gap-2 whitespace-nowrap transition-colors hover:text-[var(--navbar-text)]"
             >
-              <Phone className="h-4 w-4" />
+              <Phone className="h-[0.95rem] w-[0.95rem]" />
               <span>06-27 08 23 83</span>
             </a>
             <a
               href="mailto:hallo@wiolettajaros.nl"
-              className="hidden items-center gap-2 whitespace-nowrap transition-colors hover:text-white lg:flex"
+              className="hidden items-center gap-2 whitespace-nowrap transition-colors hover:text-[var(--navbar-text)] lg:flex"
             >
-              <Mail className="h-4 w-4" />
+              <Mail className="h-[0.95rem] w-[0.95rem]" />
               <span>hallo@wiolettajaros.nl</span>
             </a>
           </div>
@@ -91,10 +91,10 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-3 text-sm transition-colors duration-300 lg:px-4 ${
+                  className={`px-3 py-3 text-sm font-medium transition-colors duration-300 lg:px-4 ${
                     isActive
                       ? "font-semibold text-foreground"
-                      : "text-foreground/70 hover:text-foreground"
+                      : "text-foreground/80 hover:text-foreground"
                   }`}
                 >
                   {link.label}
