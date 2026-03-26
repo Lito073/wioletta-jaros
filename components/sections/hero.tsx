@@ -24,15 +24,6 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 text-center">
         <div className="mx-auto max-w-3xl space-y-5 md:space-y-6">
-          {/* Badge */}
-          <div className="inline-flex max-w-3xl items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/80 backdrop-blur-sm">
-            <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
-            <span className="text-left leading-relaxed sm:text-center">
-              Wijk en Aalburg, Hedel, Kerkdriel, Den Bosch, Waalwijk en
-              Werkendam
-            </span>
-          </div>
-
           {/* Heading */}
           <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
             Professioneel schoonmaakbedrijf
