@@ -4,13 +4,13 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[92svh] items-center justify-center overflow-hidden pt-32 pb-28 md:min-h-screen md:pt-40 md:pb-40">
+    <section className="relative flex min-h-[88svh] items-center justify-center overflow-hidden pt-28 pb-20 md:min-h-[92vh] md:pt-32 md:pb-28">
       {/* Fallback achtergrond */}
       <div className="absolute inset-0 bg-primary" />
 
-      {/* Hero background image via Next.js Image */}
+      {/* Hero background image - local file for better performance and reliability */}
       <Image
-        src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+        src="/assets/clients/hero-cleaning.jpg"
         alt=""
         fill
         priority
@@ -23,7 +23,7 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 text-center">
-        <div className="mx-auto max-w-3xl space-y-6 md:space-y-8">
+        <div className="mx-auto max-w-3xl space-y-6">
           {/* Badge */}
           <div className="inline-flex max-w-3xl items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/80 backdrop-blur-sm">
             <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
@@ -51,11 +51,11 @@ export function Hero() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col justify-center gap-4 pt-4 sm:flex-row">
+          <div className="flex flex-col justify-center gap-4 pt-3 sm:flex-row">
             <Button
               asChild
               size="lg"
-              className="min-h-14 border border-white/20 bg-primary px-8 py-6 text-base text-primary-foreground shadow-lg shadow-black/20 hover:bg-primary/90"
+              className="border border-white/20 bg-primary px-8 py-6 text-base text-primary-foreground shadow-lg shadow-black/20 hover:bg-primary/90"
             >
               <Link href="/contact">
                 Vraag een vrijblijvende offerte aan
@@ -66,7 +66,7 @@ export function Hero() {
               asChild
               variant="outline"
               size="lg"
-              className="min-h-14 border-white/30 bg-white/5 px-8 py-6 text-base text-white hover:bg-white/10"
+              className="border-white/30 bg-white/5 px-8 py-6 text-base text-white hover:bg-white/10"
             >
               <Link href="/diensten">
                 Bekijk onze diensten
