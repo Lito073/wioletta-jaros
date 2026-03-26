@@ -1,6 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Sparkles } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 const usps = [
   "Vaste schoonmaakteams — geen wisselingen",
@@ -8,6 +9,50 @@ const usps = [
   "Schoonmaak wanneer het u past",
   "Persoonlijke begeleiding",
 ];
+
+function AboutPortraitCard({ className = "" }: { className?: string }) {
+  return (
+    <div className={`glass-card overflow-hidden rounded-[1.75rem] ${className}`}>
+      <div className="grid gap-5 p-6 sm:grid-cols-[minmax(0,1fr)_8.75rem] sm:items-start sm:p-7">
+        <div className="space-y-5">
+          <blockquote className="text-foreground text-[1.05rem] leading-relaxed italic">
+            &ldquo;Wij zorgen voor rust, structuur en zichtbare kwaliteit in uw
+            pand, zodat uw medewerkers prettig kunnen werken en uw klanten zich
+            welkom voelen.&rdquo;
+          </blockquote>
+
+          <div className="h-px bg-border" />
+
+          <div className="flex items-center gap-3">
+            <div className="text-foreground flex h-10 w-10 items-center justify-center rounded-full bg-muted text-sm font-semibold">
+              WJ
+            </div>
+            <div>
+              <div className="text-foreground text-sm font-medium">
+                Wioletta Jaros
+              </div>
+              <div className="text-muted-foreground text-xs">
+                Oprichter
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative mx-auto aspect-[4/5] w-full max-w-[9.5rem] overflow-hidden rounded-[1.4rem] bg-muted sm:mx-0">
+          <Image
+            src="/assets/wioletta-portrait-v2.webp"
+            alt="Portret van Wioletta Jaros"
+            fill
+            sizes="(min-width: 1024px) 8.75rem, (min-width: 640px) 8.75rem, 9.5rem"
+            className="object-cover object-[44%_22%]"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.2),rgba(255,255,255,0.04)_42%,rgba(0,0,0,0.12))]" />
+          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(245,245,245,0.06),transparent_55%)] mix-blend-screen" />
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function AboutPreview() {
   return (
@@ -32,6 +77,8 @@ export function AboutPreview() {
               routines.
             </p>
 
+            <AboutPortraitCard className="mb-8 lg:hidden" />
+
             {/* USP list */}
             <ul className="mb-8 space-y-3">
               {usps.map((usp, index) => (
@@ -55,46 +102,8 @@ export function AboutPreview() {
           </div>
 
           {/* Visual element */}
-          <div className="relative">
-            <div className="glass-card rounded-2xl p-8 lg:p-10">
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-muted">
-                    <Sparkles className="h-8 w-8 text-foreground" />
-                  </div>
-                  <div>
-                    <div className="text-foreground text-2xl font-bold">
-                      15+
-                    </div>
-                    <div className="text-muted-foreground text-sm">
-                      Jaar ervaring
-                    </div>
-                  </div>
-                </div>
-
-                <div className="h-px bg-border" />
-
-                <blockquote className="text-foreground italic">
-                  &ldquo;Wij zorgen voor rust, structuur en zichtbare kwaliteit
-                  in uw pand, zodat uw medewerkers prettig kunnen werken en uw
-                  klanten zich welkom voelen.&rdquo;
-                </blockquote>
-
-                <div className="flex items-center gap-3">
-                  <div className="text-foreground flex h-10 w-10 items-center justify-center rounded-full bg-muted text-sm font-semibold">
-                    WJ
-                  </div>
-                  <div>
-                    <div className="text-foreground text-sm font-medium">
-                      Wioletta & Mariusz Jaros
-                    </div>
-                    <div className="text-muted-foreground text-xs">
-                      Oprichters
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="relative hidden lg:block">
+            <AboutPortraitCard className="mx-auto max-w-md" />
           </div>
         </div>
       </div>
