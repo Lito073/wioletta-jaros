@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export function CareersTeaser() {
   return (
-    <section className="bg-background py-14 lg:py-18">
+    <section className="bg-muted py-14 lg:py-18">
       <div className="container mx-auto px-4">
         <div className="glass-card mx-auto max-w-4xl rounded-3xl p-6 md:p-8">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">

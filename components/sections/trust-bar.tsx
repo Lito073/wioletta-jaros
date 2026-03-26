@@ -30,10 +30,10 @@ const stats: TrustStat[] = [
 
 export function TrustBar() {
   return (
-    <section className="relative z-30 -mt-6 px-4 md:-mt-10">
+    <section className="relative z-30 -mt-7 px-4 md:-mt-12">
       <div className="container mx-auto">
-        <div className="glass-card rounded-2xl p-5 md:p-6">
-          <div className="grid gap-5 md:grid-cols-3 md:gap-6">
+        <div className="glass-card rounded-2xl p-4 md:p-5">
+          <div className="grid gap-4 md:grid-cols-3 md:gap-5">
             {stats.map((stat, index) => (
               <div
                 key={index}

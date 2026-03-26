@@ -15,9 +15,9 @@ export function CTASection({
   buttonHref = "/contact",
 }: CTASectionProps) {
   return (
-    <section className="py-20 lg:py-28 bg-muted">
+    <section className="py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-4">
-        <div className="glass-card rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden">
+        <div className="rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden bg-muted/50 border border-border shadow-xl">
           {/* Content */}
           <div className="relative z-10 space-y-6">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
