@@ -21,7 +21,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 right-0 left-0 z-50">
-      <div className="bg-[#1a1a1a]">
+      <div className="relative overflow-visible bg-[#1a1a1a]">
         <div className="container mx-auto grid h-20 grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 md:h-[88px] md:grid-cols-[minmax(0,280px)_1fr_180px] md:gap-6 lg:grid-cols-[minmax(0,300px)_1fr_300px]">
           <Link
             href="/"
@@ -32,9 +32,9 @@ export function Header() {
               alt="Wioletta Jaros Logo"
               width={90}
               height={90}
-              className="h-14 w-auto shrink-0 transition-transform duration-300 group-hover:scale-105 md:h-[72px] lg:h-[76px]"
+              className="h-14 w-auto shrink-0 translate-y-6 transition-transform duration-300 group-hover:scale-105 md:h-[72px] md:translate-y-5 lg:h-[76px] lg:translate-y-5"
             />
-            <div className="flex min-w-0 flex-col justify-center pt-0.5">
+            <div className="flex min-w-0 translate-y-0.5 flex-col justify-center pt-0.5 md:-translate-y-0.5">
               <span className="truncate text-[1.05rem] leading-none font-semibold text-white md:text-[1.7rem]">
                 Wioletta Jaros
               </span>
