@@ -15,7 +15,7 @@ export function CTASection({
   buttonHref = "/contact",
 }: CTASectionProps) {
   return (
-    <section className="py-20 lg:py-28 bg-[#f5f5f5]">
+    <section className="py-20 lg:py-28 bg-muted">
       <div className="container mx-auto px-4">
         <div className="glass-card rounded-3xl p-8 md:p-12 lg:p-16 text-center relative overflow-hidden">
           {/* Content */}
@@ -32,7 +32,7 @@ export function CTASection({
               <Button
                 asChild
                 size="lg"
-                className="bg-[#1a1a1a] text-white hover:bg-[#1a1a1a]/90 text-base px-8 py-6"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8 py-6"
               >
                 <Link href={buttonHref}>
                   {buttonText}
@@ -48,7 +48,7 @@ export function CTASection({
                 Vrijblijvend
               </span>
               <span className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#1a1a1a]" />
+                <span className="w-2 h-2 rounded-full bg-primary" />
                 Binnen 24 uur reactie
               </span>
               <span className="flex items-center gap-2">

@@ -40,7 +40,7 @@ const services = [
 
 export function ServicesPreview() {
   return (
-    <section className="py-20 lg:py-28 bg-[#f5f5f5]">
+    <section className="py-20 lg:py-28 bg-muted">
       <div className="container mx-auto px-4">
         {/* Section header */}
         <div className="text-center mb-12">
@@ -59,11 +59,11 @@ export function ServicesPreview() {
             <Link
               key={service.title}
               href={service.href}
-              className="group glass-card rounded-xl p-6 hover:border-[#1a1a1a]/20 transition-all duration-300"
+              className="group glass-card rounded-xl p-6 hover:border-foreground/20 transition-all duration-300"
             >
               <div className="flex flex-col h-full">
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-lg bg-[#e5e5e5] flex items-center justify-center mb-4 group-hover:bg-[#1a1a1a]/10 transition-colors duration-300">
+                <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4 group-hover:bg-foreground/10 transition-colors duration-300">
                   <service.icon className="w-6 h-6 text-foreground" />
                 </div>
 
@@ -90,7 +90,7 @@ export function ServicesPreview() {
           <Button
             asChild
             variant="outline"
-            className="border-[#e5e5e5] text-foreground hover:bg-[#f8f8f8]"
+            className="border-border text-foreground hover:bg-muted/50"
           >
             <Link href="/diensten">
               Bekijk alle diensten

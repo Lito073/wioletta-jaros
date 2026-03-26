@@ -19,7 +19,7 @@ const werkgebied = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#e5e5e5] bg-[#f5f5f5]">
+    <footer className="border-t border-border bg-muted">
       <div className="container mx-auto px-4 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Kolom 1: Logo + Omschrijving */}
@@ -101,7 +101,7 @@ export function Footer() {
               {werkgebied.map((plaats) => (
                 <span
                   key={plaats}
-                  className="text-xs px-3 py-1 rounded-full bg-white text-muted-foreground border border-[#e5e5e5]"
+                  className="text-xs px-3 py-1 rounded-full bg-background text-muted-foreground border border-border"
                 >
                   {plaats}
                 </span>
@@ -111,7 +111,7 @@ export function Footer() {
         </div>
 
         {/* Onderkant balk */}
-        <div className="mt-12 pt-8 border-t border-[#e5e5e5]">
+        <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
             <p>
               © {new Date().getFullYear()} Wioletta Jaros Schoonmaakbedrijf V.O.F.

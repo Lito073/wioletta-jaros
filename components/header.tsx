@@ -4,15 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Mail, Menu, Phone, X } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -27,36 +20,44 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed top-0 right-0 left-0 z-50">
       {/* BLOK 1 - Donker met logo en contact info */}
-      <div className="bg-[#1a1a1a] relative h-16">
-        <div className="container mx-auto px-4 h-full flex items-center justify-between">
-          {/* Logo - steekt uit over blok 2 */}
+      <div className="relative h-16 bg-[#1a1a1a]">
+        <div className="container mx-auto flex h-full items-center justify-between px-4">
+          {/* Logo en bedrijfsnaam - steekt uit over blok 2 */}
           <Link
             href="/"
-            className="absolute bottom-[-20px] z-10 flex items-center gap-3 group"
+            className="group absolute bottom-[-28px] z-10 flex items-center gap-3"
           >
             <Image
               src="/assets/logo.svg"
               alt="Wioletta Jaros Logo"
-              width={50}
-              height={50}
-              className="transition-transform duration-300 group-hover:scale-105"
+              width={90}
+              height={90}
+              className="h-[60px] w-auto transition-transform duration-300 group-hover:scale-105 md:h-[90px]"
             />
+            <div className="mb-2 flex flex-col justify-center">
+              <span className="text-lg font-semibold text-white">
+                Wioletta Jaros
+              </span>
+              <span className="text-sm text-white/75">
+                Schoonmaakbedrijf V.O.F.
+              </span>
+            </div>
           </Link>
 
           {/* Contact info - alleen op desktop */}
-          <div className="hidden md:flex items-center gap-6 ml-auto text-white/80 text-sm">
+          <div className="ml-auto hidden items-center gap-6 text-sm text-white/80 md:flex">
             <a
               href="tel:0627082383"
-              className="flex items-center gap-2 hover:text-white transition-colors"
+              className="flex items-center gap-2 transition-colors hover:text-white"
             >
               <Phone className="h-4 w-4" />
               <span>06-27 08 23 83</span>
             </a>
             <a
               href="mailto:info@wiolettajaros.nl"
-              className="flex items-center gap-2 hover:text-white transition-colors"
+              className="flex items-center gap-2 transition-colors hover:text-white"
             >
               <Mail className="h-4 w-4" />
               <span>info@wiolettajaros.nl</span>
@@ -64,58 +65,38 @@ export function Header() {
           </div>
 
           {/* Mobile hamburger - rechts uitgelijnd */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="md:hidden ml-auto">
-              <Button variant="ghost" size="icon" className="text-white">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Menu openen</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent
-              side="right"
-              className="bg-[#1a1a1a] border-l border-white/10"
+          <div className="ml-auto md:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-white"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+              onClick={() => setIsOpen((open) => !open)}
             >
-              <SheetHeader className="text-left">
-                <SheetTitle className="text-white">Menu</SheetTitle>
-              </SheetHeader>
-              <nav className="flex flex-col gap-4 mt-8">
-                {navLinks.map((link) => {
-                  const isActive = pathname === link.href;
-                  return (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className={`text-lg transition-colors duration-300 py-2 ${
-                        isActive
-                          ? "text-white font-bold underline underline-offset-4"
-                          : "text-white/70 hover:text-white"
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
-                  );
-                })}
-              </nav>
-            </SheetContent>
-          </Sheet>
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">
+                {isOpen ? "Menu sluiten" : "Menu openen"}
+              </span>
+            </Button>
+          </div>
         </div>
       </div>
 
       {/* BLOK 2 - Wit met navigatie */}
-      <nav className="hidden md:block bg-white border-b border-[#e5e5e5]">
+      <nav className="hidden border-b border-border bg-background md:block">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center pl-[70px] h-12">
-            {navLinks.map((link, index) => {
+          <div className="flex h-12 items-center justify-center pl-[70px]">
+            {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm transition-colors duration-300 px-4 py-1 ${
+                  className={`px-4 py-3 text-sm transition-colors duration-300 ${
                     isActive
-                      ? "text-[#1a1a1a] font-bold underline underline-offset-4 decoration-[#1a1a1a]"
-                      : "text-[#1a1a1a]/70 hover:text-[#1a1a1a]"
+                      ? "font-semibold text-foreground"
+                      : "text-foreground/70 hover:text-foreground"
                   }`}
                 >
                   {link.label}
@@ -125,6 +106,62 @@ export function Header() {
           </div>
         </div>
       </nav>
+
+      {isOpen ? (
+        <>
+          <button
+            type="button"
+            aria-hidden="true"
+            className="fixed top-16 right-0 bottom-0 left-0 z-40 bg-black/45 md:hidden"
+            onClick={() => setIsOpen(false)}
+          />
+          <div
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="mobile-menu-title"
+            className="fixed top-16 right-0 bottom-0 z-50 flex w-[85vw] max-w-sm flex-col border-l border-white/10 bg-primary p-4 md:hidden"
+          >
+            <div className="flex items-center justify-between">
+              <h2
+                id="mobile-menu-title"
+                className="text-base font-semibold text-white"
+              >
+                Menu
+              </h2>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-white"
+                onClick={() => setIsOpen(false)}
+              >
+                <X className="h-5 w-5" />
+                <span className="sr-only">Menu sluiten</span>
+              </Button>
+            </div>
+
+            <nav className="mt-8 flex flex-col gap-4">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`py-2 text-lg transition-colors duration-300 ${
+                      isActive
+                        ? "font-bold text-white underline underline-offset-4"
+                        : "text-white/70 hover:text-white"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </nav>
+          </div>
+        </>
+      ) : null}
     </header>
   );
 }

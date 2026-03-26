@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Sparkles } from "lucide-react";
 
 const usps = [
   "Vaste schoonmaakteams — geen wisselingen",
@@ -11,31 +11,32 @@ const usps = [
 
 export function AboutPreview() {
   return (
-    <section className="py-20 lg:py-28 relative overflow-hidden bg-white">
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <section className="relative overflow-hidden bg-background py-20 lg:py-28">
+      <div className="relative z-10 container mx-auto px-4">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-foreground mb-6 text-3xl font-bold md:text-4xl">
               Schoonmaak met een{" "}
               <span className="text-foreground/80">persoonlijk gezicht</span>
             </h2>
 
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
               Wioletta Jaros Schoonmaakbedrijf V.O.F. is opgericht in 2009 door
               Wioletta en Mariusz Jaros — een echtpaar met één visie: schoonmaak
               moet betrouwbaar, overzichtelijk en persoonlijk zijn.
             </p>
 
             <p className="text-muted-foreground mb-8">
-              Wij werken niet met wisselende teams. Uw locatie, uw mensen, uw routines.
+              Wij werken niet met wisselende teams. Uw locatie, uw mensen, uw
+              routines.
             </p>
 
             {/* USP list */}
-            <ul className="space-y-3 mb-8">
+            <ul className="mb-8 space-y-3">
               {usps.map((usp, index) => (
                 <li key={index} className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-foreground flex-shrink-0" />
+                  <CheckCircle className="text-foreground h-5 w-5 flex-shrink-0" />
                   <span className="text-foreground">{usp}</span>
                 </li>
               ))}
@@ -44,7 +45,7 @@ export function AboutPreview() {
             <Button
               asChild
               variant="outline"
-              className="border-[#e5e5e5] text-foreground hover:bg-[#f8f8f8]"
+              className="text-foreground border-border hover:bg-muted/50"
             >
               <Link href="/over-ons">
                 Lees ons verhaal
@@ -58,33 +59,36 @@ export function AboutPreview() {
             <div className="glass-card rounded-2xl p-8 lg:p-10">
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-full bg-[#f5f5f5] flex items-center justify-center">
-                    <span className="text-3xl">✨</span>
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-muted">
+                    <Sparkles className="h-8 w-8 text-foreground" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-foreground">15+</div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className="text-foreground text-2xl font-bold">
+                      15+
+                    </div>
+                    <div className="text-muted-foreground text-sm">
                       Jaar ervaring
                     </div>
                   </div>
                 </div>
 
-                <div className="h-px bg-[#e5e5e5]" />
+                <div className="h-px bg-border" />
 
                 <blockquote className="text-foreground italic">
-                  "Wij zorgen voor rust, structuur en zichtbare kwaliteit in uw pand,
-                  zodat uw medewerkers prettig kunnen werken en uw klanten zich welkom voelen."
+                  &ldquo;Wij zorgen voor rust, structuur en zichtbare kwaliteit
+                  in uw pand, zodat uw medewerkers prettig kunnen werken en uw
+                  klanten zich welkom voelen.&rdquo;
                 </blockquote>
 
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#f5f5f5] flex items-center justify-center text-sm font-semibold text-foreground">
+                  <div className="text-foreground flex h-10 w-10 items-center justify-center rounded-full bg-muted text-sm font-semibold">
                     WJ
                   </div>
                   <div>
-                    <div className="text-sm font-medium text-foreground">
+                    <div className="text-foreground text-sm font-medium">
                       Wioletta & Mariusz Jaros
                     </div>
-                    <div className="text-xs text-muted-foreground">
+                    <div className="text-muted-foreground text-xs">
                       Oprichters
                     </div>
                   </div>

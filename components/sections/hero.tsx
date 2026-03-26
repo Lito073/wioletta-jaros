@@ -1,19 +1,25 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Achtergrond met donkere gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/90 via-[#1a1a1a]/80 to-[#1a1a1a]/70 z-10" />
+      {/* Fallback achtergrond */}
+      <div className="absolute inset-0 bg-primary" />
 
-      {/* Hero background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
-        }}
+      {/* Hero background image via Next.js Image */}
+      <Image
+        src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+        alt=""
+        fill
+        priority
+        className="object-cover object-center"
+        sizes="100vw"
       />
+
+      {/* Achtergrond met donkere gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/70 z-10" />
 
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 text-center">
@@ -45,7 +51,7 @@ export function Hero() {
             <Button
               asChild
               size="lg"
-              className="bg-[#1a1a1a] text-white hover:bg-[#1a1a1a]/90 text-base px-8 py-6 border border-white/20"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8 py-6 border border-white/20"
             >
               <Link href="/contact">
                 Vraag een vrijblijvende offerte aan
@@ -66,7 +72,7 @@ export function Hero() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce motion-reduce:animate-none">
           <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1">
             <div className="w-1.5 h-3 rounded-full bg-white/50" />
           </div>
