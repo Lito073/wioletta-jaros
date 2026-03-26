@@ -36,8 +36,8 @@ export function Hero() {
           <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
             Vaste gezichten, duidelijke afspraken en meetbare kwaliteit.
             <span className="block mt-2">
-              Actief in Wijk en Aalburg, Hedel, Kerkdriel, Den Bosch, Waalwijk
-              en Werkendam.
+              Actief in Wijk en Aalburg, Hedel, Kerkdriel, Waalwijk en
+              omliggende plaatsen.
             </span>
           </p>
 

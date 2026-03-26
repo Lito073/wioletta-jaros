@@ -95,12 +95,12 @@ export function ClientMarquee() {
             Vertrouwd door
           </p>
           <h2 className="mt-3 text-2xl font-bold text-foreground md:text-3xl">
-            Wij werken voor bedrijven in Wijk en Aalburg, Hedel en omgeving
+            Wij werken voor bedrijven in Wijk en Aalburg en omliggende plaatsen
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
-            Een selectie uit opdrachtgevers in Wijk en Aalburg, Hedel,
-            Kerkdriel, Den Bosch, Waalwijk en Werkendam waarvoor wij met vaste
-            teams en heldere afspraken werken.
+            Een selectie uit opdrachtgevers waarvoor wij op locatie werken met
+            vaste teams, heldere afspraken en aandacht voor een nette,
+            representatieve werkomgeving.
           </p>
         </div>
 

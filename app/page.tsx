@@ -3,6 +3,7 @@ import { TrustBar } from "@/components/sections/trust-bar";
 import { ClientMarquee } from "@/components/sections/client-marquee";
 import { ServicesPreview } from "@/components/sections/services-preview";
 import { AboutPreview } from "@/components/sections/about-preview";
+import { CareersTeaser } from "@/components/sections/careers-teaser";
 import { CTASection } from "@/components/sections/cta";
 
 export default function Home() {
@@ -22,6 +23,9 @@ export default function Home() {
 
       {/* Over Ons preview */}
       <AboutPreview />
+
+      {/* Werken bij */}
+      <CareersTeaser />
 
       {/* CTA sectie */}
       <CTASection />
