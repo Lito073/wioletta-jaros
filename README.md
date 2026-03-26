@@ -76,6 +76,12 @@ npm run start
 
 # Lint code
 npm run lint
+
+# Run E2E tests
+npm run test:e2e
+
+# Full verification (lint, typecheck, build, test)
+npm run verify
 ```
 
 Open [http://localhost:3000](http://localhost:3000) om de site te bekijken.

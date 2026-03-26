@@ -49,3 +49,9 @@ next-env.d.ts
 
 # output artifacts
 /output
+
+# Playwright MCP artifacts
+/.playwright-mcp
+
+# Review/test screenshots in root
+*-check.png
