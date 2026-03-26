@@ -1,34 +1,30 @@
 const stats = [
   {
-    value: "2009",
-    label: "Opgericht in",
-  },
-  {
-    value: "15+",
-    label: "Jaar ervaring",
+    value: "Sinds 2009",
+    label: "Persoonlijk opgericht en opgebouwd",
   },
   {
     value: "Vaste",
     label: "Schoonmaakteams",
   },
   {
-    value: "Regio",
-    label: "Altena & omgeving",
+    value: "Regio Altena",
+    label: "& omgeving",
   },
 ];
 
 export function TrustBar() {
   return (
-    <section className="relative -mt-20 z-30 px-4">
+    <section className="relative z-30 -mt-10 px-4 md:-mt-16">
       <div className="container mx-auto">
-        <div className="glass-card rounded-2xl p-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="glass-card rounded-2xl p-5 md:p-8">
+          <div className="grid gap-5 sm:grid-cols-3 sm:gap-8">
             {stats.map((stat, index) => (
               <div
                 key={index}
                 className="text-center"
               >
-                <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+                <div className="mb-2 text-2xl font-bold text-foreground md:text-4xl">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground">

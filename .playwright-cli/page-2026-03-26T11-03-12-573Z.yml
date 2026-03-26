@@ -1,0 +1,219 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "Wioletta Jaros Logo Wioletta Jaros Schoonmaakbedrijf V.O.F." [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Wioletta Jaros Logo" [ref=e6]
+        - generic [ref=e7]:
+          - generic [ref=e8]: Wioletta Jaros
+          - generic [ref=e9]: Schoonmaakbedrijf V.O.F.
+      - generic [ref=e10]:
+        - link "06-27 08 23 83" [ref=e11] [cursor=pointer]:
+          - /url: tel:0627082383
+          - img [ref=e12]
+          - generic [ref=e14]: 06-27 08 23 83
+        - link "info@wiolettajaros.nl" [ref=e15] [cursor=pointer]:
+          - /url: mailto:info@wiolettajaros.nl
+          - img [ref=e16]
+          - generic [ref=e19]: info@wiolettajaros.nl
+    - navigation [ref=e20]:
+      - generic [ref=e22]:
+        - link "Home" [ref=e23] [cursor=pointer]:
+          - /url: /
+        - link "Over Ons" [ref=e24] [cursor=pointer]:
+          - /url: /over-ons
+        - link "Diensten" [ref=e25] [cursor=pointer]:
+          - /url: /diensten
+        - link "Vacatures" [ref=e26] [cursor=pointer]:
+          - /url: /vacatures
+        - link "Contact" [ref=e27] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=e28]:
+    - generic [ref=e33]:
+      - generic [ref=e34]: Regio Altena & omgeving
+      - heading "Professioneel schoonmaakbedrijf in regio Altena" [level=1] [ref=e36]:
+        - text: Professioneel schoonmaakbedrijf
+        - generic [ref=e37]: in regio Altena
+      - paragraph [ref=e38]:
+        - text: Vaste gezichten, duidelijke afspraken en meetbare kwaliteit.
+        - generic [ref=e39]: Al meer dan 15 jaar uw partner in professionele schoonmaak.
+      - generic [ref=e40]:
+        - link "Vraag een vrijblijvende offerte aan →" [ref=e41] [cursor=pointer]:
+          - /url: /contact
+          - text: Vraag een vrijblijvende offerte aan
+          - generic [ref=e42]: →
+        - link "Bekijk onze diensten" [ref=e43] [cursor=pointer]:
+          - /url: /diensten
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e52]: "2009"
+        - generic [ref=e53]: Opgericht in
+      - generic [ref=e54]:
+        - generic [ref=e55]: 15+
+        - generic [ref=e56]: Jaar ervaring
+      - generic [ref=e57]:
+        - generic [ref=e58]: Vaste
+        - generic [ref=e59]: Schoonmaakteams
+      - generic [ref=e60]:
+        - generic [ref=e61]: Regio
+        - generic [ref=e62]: Altena & omgeving
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - paragraph [ref=e66]: Vertrouwd door
+        - heading "Wij werken voor bedrijven in Altena en omgeving" [level=2] [ref=e67]
+        - paragraph [ref=e68]: Een selectie uit opdrachtgevers waarvoor wij met vaste teams en heldere afspraken werken.
+      - list "Bedrijven waarvoor wij werken" [ref=e70]:
+        - listitem [ref=e71]: Bonte
+        - listitem [ref=e72]: Bouwgroep Goesten
+        - listitem [ref=e73]: Car Lock Systems
+        - listitem [ref=e74]: Jif Line Remote Diagnostics
+        - listitem [ref=e75]: De Groot Transport
+        - listitem [ref=e76]: Dutch Quality Group
+        - listitem [ref=e77]: EYYE Retail
+        - listitem [ref=e78]: Everest
+        - listitem [ref=e79]: GvH Engineering
+        - listitem [ref=e80]: HAK Fresh
+        - listitem [ref=e81]: Kras Busreizen
+        - listitem [ref=e82]: RKVV Nieuwkuijk
+        - listitem [ref=e83]: Saldad Salarisadministratie
+        - listitem [ref=e84]: Tandartspraktijk Schoonus
+        - listitem [ref=e85]: Villea Ontzorgwoningen
+    - generic [ref=e149]:
+      - generic [ref=e150]:
+        - heading "Onze diensten" [level=2] [ref=e151]
+        - paragraph [ref=e152]: Professionele schoonmaak op maat voor uw bedrijfspand. Elke dienst wordt uitgevoerd door vaste teams die uw pand kennen.
+      - generic [ref=e153]:
+        - link "Kantoorschoonmaak Dagelijkse of periodieke schoonmaak van werkplekken, sanitair, gangen, kantines en entrees. Meer lezen →" [ref=e154] [cursor=pointer]:
+          - /url: /diensten#kantoorschoonmaak
+          - generic [ref=e155]:
+            - img [ref=e157]
+            - heading "Kantoorschoonmaak" [level=3] [ref=e161]
+            - paragraph [ref=e162]: Dagelijkse of periodieke schoonmaak van werkplekken, sanitair, gangen, kantines en entrees.
+            - generic [ref=e163]:
+              - text: Meer lezen
+              - generic [ref=e164]: →
+        - link "Vloeronderhoud & dieptereiniging Tapijt, PVC, linoleum en harde vloeren professioneel gereinigd en behandeld. Meer lezen →" [ref=e165] [cursor=pointer]:
+          - /url: /diensten#vloeronderhoud
+          - generic [ref=e166]:
+            - img [ref=e168]
+            - heading "Vloeronderhoud & dieptereiniging" [level=3] [ref=e171]
+            - paragraph [ref=e172]: Tapijt, PVC, linoleum en harde vloeren professioneel gereinigd en behandeld.
+            - generic [ref=e173]:
+              - text: Meer lezen
+              - generic [ref=e174]: →
+        - link "Glasbewassing Telewash buiten, Unger Stingray binnen — veilig, efficiënt en streeploos. Meer lezen →" [ref=e175] [cursor=pointer]:
+          - /url: /diensten#glasbewassing
+          - generic [ref=e176]:
+            - img [ref=e178]
+            - heading "Glasbewassing" [level=3] [ref=e184]
+            - paragraph [ref=e185]: Telewash buiten, Unger Stingray binnen — veilig, efficiënt en streeploos.
+            - generic [ref=e186]:
+              - text: Meer lezen
+              - generic [ref=e187]: →
+        - link "Bouwschoonmaak Schoonmaak na bouw of renovatie, ook voor particulieren. Op aanvraag, geen lange wachttijden. Meer lezen →" [ref=e188] [cursor=pointer]:
+          - /url: /diensten#bouwschoonmaak
+          - generic [ref=e189]:
+            - img [ref=e191]
+            - heading "Bouwschoonmaak" [level=3] [ref=e196]
+            - paragraph [ref=e197]: Schoonmaak na bouw of renovatie, ook voor particulieren. Op aanvraag, geen lange wachttijden.
+            - generic [ref=e198]:
+              - text: Meer lezen
+              - generic [ref=e199]: →
+      - link "Bekijk alle diensten →" [ref=e201] [cursor=pointer]:
+        - /url: /diensten
+        - text: Bekijk alle diensten
+        - generic [ref=e202]: →
+    - generic [ref=e205]:
+      - generic [ref=e206]:
+        - heading "Schoonmaak met een persoonlijk gezicht" [level=2] [ref=e207]
+        - paragraph [ref=e208]: "Wioletta Jaros Schoonmaakbedrijf V.O.F. is opgericht in 2009 door Wioletta en Mariusz Jaros — een echtpaar met één visie: schoonmaak moet betrouwbaar, overzichtelijk en persoonlijk zijn."
+        - paragraph [ref=e209]: Wij werken niet met wisselende teams. Uw locatie, uw mensen, uw routines.
+        - list [ref=e210]:
+          - listitem [ref=e211]:
+            - img [ref=e212]
+            - generic [ref=e215]: Vaste schoonmaakteams — geen wisselingen
+          - listitem [ref=e216]:
+            - img [ref=e217]
+            - generic [ref=e220]: Duidelijke prijzen — geen verrassingen
+          - listitem [ref=e221]:
+            - img [ref=e222]
+            - generic [ref=e225]: Schoonmaak wanneer het u past
+          - listitem [ref=e226]:
+            - img [ref=e227]
+            - generic [ref=e230]: Persoonlijke begeleiding
+        - link "Lees ons verhaal →" [ref=e231] [cursor=pointer]:
+          - /url: /over-ons
+          - text: Lees ons verhaal
+          - generic [ref=e232]: →
+      - generic [ref=e235]:
+        - generic [ref=e236]:
+          - img [ref=e238]
+          - generic [ref=e241]:
+            - generic [ref=e242]: 15+
+            - generic [ref=e243]: Jaar ervaring
+        - blockquote [ref=e245]: “Wij zorgen voor rust, structuur en zichtbare kwaliteit in uw pand, zodat uw medewerkers prettig kunnen werken en uw klanten zich welkom voelen.”
+        - generic [ref=e246]:
+          - generic [ref=e247]: WJ
+          - generic [ref=e248]:
+            - generic [ref=e249]: Wioletta & Mariusz Jaros
+            - generic [ref=e250]: Oprichters
+    - generic [ref=e254]:
+      - heading "Klaar voor een schone werkomgeving?" [level=2] [ref=e255]
+      - paragraph [ref=e256]: Vraag een vrijblijvende offerte aan. Binnen 24 uur ontvangt u een voorstel op maat.
+      - link "Offerte aanvragen →" [ref=e258] [cursor=pointer]:
+        - /url: /contact
+        - text: Offerte aanvragen
+        - generic [ref=e259]: →
+      - generic [ref=e260]:
+        - generic [ref=e261]: Vrijblijvend
+        - generic [ref=e263]: Binnen 24 uur reactie
+        - generic [ref=e265]: Op maat gemaakt
+  - contentinfo [ref=e267]:
+    - generic [ref=e268]:
+      - generic [ref=e269]:
+        - generic [ref=e270]:
+          - link "Wioletta Jaros Logo Wioletta Jaros Schoonmaakbedrijf" [ref=e271] [cursor=pointer]:
+            - /url: /
+            - img "Wioletta Jaros Logo" [ref=e272]
+            - generic [ref=e273]:
+              - generic [ref=e274]: Wioletta Jaros
+              - generic [ref=e275]: Schoonmaakbedrijf
+          - paragraph [ref=e276]:
+            - text: Wioletta Jaros Schoonmaakbedrijf V.O.F.
+            - text: Professionele schoonmaak voor kantoren, praktijken en bedrijfspanden in regio Altena.
+        - generic [ref=e277]:
+          - heading "Navigatie" [level=3] [ref=e278]
+          - navigation [ref=e279]:
+            - link "Over Ons" [ref=e280] [cursor=pointer]:
+              - /url: /over-ons
+            - link "Diensten" [ref=e281] [cursor=pointer]:
+              - /url: /diensten
+            - link "Vacatures" [ref=e282] [cursor=pointer]:
+              - /url: /vacatures
+            - link "Contact" [ref=e283] [cursor=pointer]:
+              - /url: /contact
+        - generic [ref=e284]:
+          - heading "Contact" [level=3] [ref=e285]
+          - generic [ref=e286]:
+            - generic [ref=e287]:
+              - text: Donksewaard 11
+              - text: 4261 ME Wijk en Aalburg
+            - 'link "Tel: 06-27 08 23 83" [ref=e288] [cursor=pointer]':
+              - /url: tel:0627082383
+            - 'link "E-mail: info@wiolettajaros.nl" [ref=e289] [cursor=pointer]':
+              - /url: mailto:info@wiolettajaros.nl
+        - generic [ref=e290]:
+          - heading "Werkgebied" [level=3] [ref=e291]
+          - generic [ref=e292]:
+            - generic [ref=e293]: Wijk en Aalburg
+            - generic [ref=e294]: Hedel
+            - generic [ref=e295]: Kerkdriel
+            - generic [ref=e296]: Den Bosch
+            - generic [ref=e297]: Waalwijk
+            - generic [ref=e298]: Werkendam
+      - generic [ref=e300]:
+        - paragraph [ref=e301]: © 2026 Wioletta Jaros Schoonmaakbedrijf V.O.F.
+        - paragraph [ref=e302]: "KvK: 65539508"
+  - button "Open Next.js Dev Tools" [ref=e308] [cursor=pointer]:
+    - img [ref=e309]
+  - alert [ref=e312]

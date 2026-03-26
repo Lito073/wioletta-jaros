@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-[92svh] items-center justify-center overflow-hidden pt-32 pb-28 md:min-h-screen md:pt-40 md:pb-40">
       {/* Fallback achtergrond */}
       <div className="absolute inset-0 bg-primary" />
 
@@ -23,35 +23,39 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 text-center">
-        <div className="max-w-3xl mx-auto space-y-6">
+        <div className="mx-auto max-w-3xl space-y-6 md:space-y-8">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm text-white/80">
-            <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-            Regio Altena & omgeving
+          <div className="inline-flex max-w-3xl items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/80 backdrop-blur-sm">
+            <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
+            <span className="text-left leading-relaxed sm:text-center">
+              Wijk en Aalburg, Hedel, Kerkdriel, Den Bosch, Waalwijk en
+              Werkendam
+            </span>
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
             Professioneel schoonmaakbedrijf
-            <span className="block text-white/80 mt-2">
-              in regio Altena
+            <span className="mt-2 block text-white/80">
+              voor Wijk en Aalburg, Hedel en omgeving
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
             Vaste gezichten, duidelijke afspraken en meetbare kwaliteit.
             <span className="block mt-2">
-              Al meer dan 15 jaar uw partner in professionele schoonmaak.
+              Actief in Wijk en Aalburg, Hedel, Kerkdriel, Den Bosch, Waalwijk
+              en Werkendam.
             </span>
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+          <div className="flex flex-col justify-center gap-4 pt-4 sm:flex-row">
             <Button
               asChild
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8 py-6 border border-white/20"
+              className="min-h-14 border border-white/20 bg-primary px-8 py-6 text-base text-primary-foreground shadow-lg shadow-black/20 hover:bg-primary/90"
             >
               <Link href="/contact">
                 Vraag een vrijblijvende offerte aan
@@ -62,19 +66,12 @@ export function Hero() {
               asChild
               variant="outline"
               size="lg"
-              className="border-white/30 text-white hover:bg-white/10 text-base px-8 py-6"
+              className="min-h-14 border-white/30 bg-white/5 px-8 py-6 text-base text-white hover:bg-white/10"
             >
               <Link href="/diensten">
                 Bekijk onze diensten
               </Link>
             </Button>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce motion-reduce:animate-none">
-          <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1">
-            <div className="w-1.5 h-3 rounded-full bg-white/50" />
           </div>
         </div>
       </div>

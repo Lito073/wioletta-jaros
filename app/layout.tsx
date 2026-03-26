@@ -16,19 +16,24 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Wioletta Jaros Schoonmaakbedrijf | Professionele schoonmaak in regio Altena",
+    default:
+      "Wioletta Jaros Schoonmaakbedrijf | Professionele schoonmaak in Wijk en Aalburg en omgeving",
     template: "%s | Wioletta Jaros Schoonmaakbedrijf",
   },
   description:
-    "Wioletta Jaros Schoonmaakbedrijf V.O.F. - Professionele schoonmaakdiensten in regio Altena, Nederland. Vaste teams, duidelijke prijzen, persoonlijke service.",
+    "Wioletta Jaros Schoonmaakbedrijf V.O.F. - Professionele schoonmaakdiensten in Wijk en Aalburg, Hedel, Kerkdriel, Den Bosch, Waalwijk en Werkendam. Vaste teams, duidelijke prijzen en persoonlijke service.",
   keywords: [
     "schoonmaakbedrijf",
-    "Altena",
     "kantoorschoonmaak",
     "vloeronderhoud",
     "glasbewassing",
     "bouwschoonmaak",
     "Wijk en Aalburg",
+    "Hedel",
+    "Kerkdriel",
+    "Den Bosch",
+    "Waalwijk",
+    "Werkendam",
   ],
   authors: [{ name: "Wioletta Jaros Schoonmaakbedrijf V.O.F." }],
   openGraph: {
@@ -36,9 +41,10 @@ export const metadata: Metadata = {
     locale: "nl_NL",
     url: "https://wioletta-jaros.vercel.app",
     siteName: "Wioletta Jaros Schoonmaakbedrijf",
-    title: "Wioletta Jaros Schoonmaakbedrijf | Professionele schoonmaak in regio Altena",
+    title:
+      "Wioletta Jaros Schoonmaakbedrijf | Professionele schoonmaak in Wijk en Aalburg en omgeving",
     description:
-      "Professionele schoonmaakdiensten in regio Altena. Vaste teams, duidelijke prijzen, persoonlijke service.",
+      "Professionele schoonmaakdiensten in Wijk en Aalburg, Hedel, Kerkdriel, Den Bosch, Waalwijk en Werkendam.",
   },
   robots: {
     index: true,
@@ -58,7 +64,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 pt-20 md:pt-24">{children}</main>
         <Footer />
       </body>
     </html>

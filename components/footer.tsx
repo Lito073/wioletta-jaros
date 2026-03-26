@@ -43,8 +43,9 @@ export function Footer() {
             <p className="text-sm text-muted-foreground leading-relaxed">
               Wioletta Jaros Schoonmaakbedrijf V.O.F.
               <br />
-              Professionele schoonmaak voor kantoren, praktijken en bedrijfspanden
-              in regio Altena.
+              Professionele schoonmaak voor kantoren, praktijken en
+              bedrijfspanden in Wijk en Aalburg, Hedel, Kerkdriel, Den Bosch,
+              Waalwijk en Werkendam.
             </p>
           </div>
 
