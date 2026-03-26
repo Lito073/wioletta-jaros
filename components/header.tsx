@@ -21,7 +21,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 right-0 left-0 z-50">
-      <div className="relative overflow-visible bg-[#1a1a1a]">
+      <div className="relative overflow-visible bg-[var(--navbar-bg)]">
         <div className="container mx-auto grid h-20 grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 md:h-[88px] md:grid-cols-[minmax(0,280px)_1fr_180px] md:gap-6 lg:grid-cols-[minmax(0,300px)_1fr_300px]">
           <Link
             href="/"
@@ -119,7 +119,7 @@ export function Header() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="mobile-menu-title"
-            className="fixed top-20 right-0 bottom-0 z-50 flex w-[85vw] max-w-sm flex-col border-l border-white/10 bg-primary p-4 md:hidden"
+            className="fixed top-20 right-0 bottom-0 z-50 flex w-[85vw] max-w-sm flex-col border-l border-[var(--navbar-border)] bg-[var(--navbar-bg)] p-4 md:hidden"
           >
             <div className="flex items-center justify-between">
               <h2

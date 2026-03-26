@@ -92,6 +92,7 @@
   --navbar-bg: #1a1a1a;
   --navbar-text: #ffffff;
   --navbar-text-muted: rgba(255, 255, 255, 0.7);
+  --navbar-border: rgba(255, 255, 255, 0.1);
 }
 
 .dark {
