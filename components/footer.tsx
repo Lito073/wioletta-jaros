@@ -1,20 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import { companyInfo } from "@/lib/site-content";
 
 const footerLinks = [
   { href: "/over-ons", label: "Over Ons" },
   { href: "/diensten", label: "Diensten" },
   { href: "/vacatures", label: "Vacatures" },
   { href: "/contact", label: "Contact" },
-];
-
-const werkgebied = [
-  "Wijk en Aalburg",
-  "Hedel",
-  "Kerkdriel",
-  "Den Bosch",
-  "Waalwijk",
-  "Werkendam",
 ];
 
 export function Footer() {
@@ -33,7 +25,7 @@ export function Footer() {
               />
               <div className="flex flex-col">
                 <span className="text-lg font-semibold text-[var(--navbar-text)]">
-                  Wioletta Jaros
+                  {companyInfo.shortName}
                 </span>
                 <span className="text-xs text-[var(--navbar-text-muted)]">
                   Schoonmaakbedrijf V.O.F.
@@ -41,9 +33,7 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm text-[var(--navbar-text-muted)] leading-relaxed">
-              Professionele schoonmaak voor kantoren, praktijken en
-              bedrijfspanden in Wijk en Aalburg, Hedel, Kerkdriel, Den Bosch,
-              Waalwijk en Werkendam.
+              {companyInfo.tagline}
             </p>
           </div>
 
@@ -72,21 +62,21 @@ export function Footer() {
             </h3>
             <div className="flex flex-col gap-3 text-sm text-[var(--navbar-text-muted)]">
               <address className="not-italic">
-                Donksewaard 11
+                {companyInfo.address.street}
                 <br />
-                4261 ME Wijk en Aalburg
+                {companyInfo.address.postalCode} {companyInfo.address.city}
               </address>
               <a
-                href="tel:0627082383"
+                href={companyInfo.phoneHref}
                 className="hover:text-[var(--navbar-text)] transition-colors duration-300"
               >
-                Tel: 06-27 08 23 83
+                Tel: {companyInfo.phone}
               </a>
               <a
-                href="mailto:hallo@wiolettajaros.nl"
+                href={companyInfo.emailHref}
                 className="hover:text-[var(--navbar-text)] transition-colors duration-300"
               >
-                E-mail: hallo@wiolettajaros.nl
+                E-mail: {companyInfo.email}
               </a>
             </div>
           </div>
@@ -97,7 +87,7 @@ export function Footer() {
               Werkgebied
             </h3>
             <div className="flex flex-wrap gap-2">
-              {werkgebied.map((plaats) => (
+              {companyInfo.serviceArea.map((plaats) => (
                 <span
                   key={plaats}
                   className="text-xs px-3 py-1 rounded-full bg-white/5 text-[var(--navbar-text-muted)] border border-[var(--navbar-border)]"
@@ -113,10 +103,10 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-[var(--navbar-border)]">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[var(--navbar-text-muted)]">
             <p>
-              © {new Date().getFullYear()} Wioletta Jaros Schoonmaakbedrijf V.O.F.
+              © {new Date().getFullYear()} {companyInfo.name}
             </p>
             <p>
-              KvK: 65539508
+              KvK: {companyInfo.kvk}
             </p>
           </div>
         </div>

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { companyInfo } from "@/lib/site-content";
 import { Mail, Menu, Phone, X } from "lucide-react";
 
 const navLinks = [
@@ -36,7 +37,7 @@ export function Header() {
             />
             <div className="flex min-w-0 translate-y-1 flex-col justify-center md:translate-y-0">
               <span className="truncate text-[1.08rem] leading-none font-bold tracking-[-0.035em] text-[var(--navbar-text)] md:text-[1.78rem]">
-                Wioletta Jaros
+                {companyInfo.shortName}
               </span>
               <span className="truncate pt-1 text-[0.76rem] leading-[1.1] font-semibold tracking-[0.01em] text-[color:rgba(255,255,255,0.9)] md:pt-1.5 md:text-[0.95rem] md:leading-tight">
                 Schoonmaakbedrijf V.O.F.
@@ -48,18 +49,18 @@ export function Header() {
 
           <div className="ml-auto hidden items-center justify-end gap-4 text-[0.95rem] font-medium text-[color:rgba(255,255,255,0.92)] md:flex">
             <a
-              href="tel:0627082383"
+              href={companyInfo.phoneHref}
               className="flex items-center gap-2 whitespace-nowrap transition-colors hover:text-[var(--navbar-text)]"
             >
               <Phone className="h-[0.95rem] w-[0.95rem]" />
-              <span>06-27 08 23 83</span>
+              <span>{companyInfo.phone}</span>
             </a>
             <a
-              href="mailto:hallo@wiolettajaros.nl"
+              href={companyInfo.emailHref}
               className="hidden items-center gap-2 whitespace-nowrap transition-colors hover:text-[var(--navbar-text)] lg:flex"
             >
               <Mail className="h-[0.95rem] w-[0.95rem]" />
-              <span>hallo@wiolettajaros.nl</span>
+              <span>{companyInfo.email}</span>
             </a>
           </div>
 

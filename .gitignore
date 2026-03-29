@@ -61,6 +61,19 @@ next-env.d.ts
 .agents/
 .codex/
 
+# AI tooling
+skills-lock.json
+
+# IDE
+.vscode/
+
+# Development docs
+docs/
+
+# Tests & test config
+tests/
+playwright.config.ts
+
 # Temporary files
 code_review.md
 PLANS.md

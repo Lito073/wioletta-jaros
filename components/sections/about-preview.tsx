@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { aboutQuote, primaryCta } from "@/lib/site-content";
 import { CheckCircle } from "lucide-react";
 
 const usps = [
@@ -16,9 +17,7 @@ function AboutPortraitCard({ className = "" }: { className?: string }) {
       <div className="grid gap-5 p-6 sm:grid-cols-[minmax(0,1fr)_8.75rem] sm:items-start sm:p-7">
         <div className="space-y-5">
           <blockquote className="text-foreground text-[1.05rem] leading-relaxed italic">
-            &ldquo;Wij zorgen voor rust, structuur en zichtbare kwaliteit in uw
-            pand, zodat uw medewerkers prettig kunnen werken en uw klanten zich
-            welkom voelen.&rdquo;
+            &ldquo;{aboutQuote}&rdquo;
           </blockquote>
 
           <div className="h-px bg-border" />
@@ -58,9 +57,9 @@ export function AboutPreview() {
   return (
     <section className="relative overflow-hidden bg-background py-20 lg:py-28">
       <div className="relative z-10 container mx-auto px-4">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(18rem,26rem)] lg:gap-16">
           {/* Content */}
-          <div>
+          <div className="order-2 lg:order-1">
             <h2 className="text-foreground mb-6 text-3xl font-bold md:text-4xl">
               Schoonmaak met een{" "}
               <span className="text-foreground/80">persoonlijk gezicht</span>
@@ -77,8 +76,6 @@ export function AboutPreview() {
               routines.
             </p>
 
-            <AboutPortraitCard className="mb-8 lg:hidden" />
-
             {/* USP list */}
             <ul className="mb-8 space-y-3">
               {usps.map((usp, index) => (
@@ -94,15 +91,15 @@ export function AboutPreview() {
               variant="outline"
               className="text-foreground border-border hover:bg-muted/50"
             >
-              <Link href="/over-ons">
-                Lees ons verhaal
+              <Link href={primaryCta.href}>
+                {primaryCta.shortLabel}
                 <span className="ml-2">→</span>
               </Link>
             </Button>
           </div>
 
           {/* Visual element */}
-          <div className="relative hidden lg:block">
+          <div className="order-1 relative lg:order-2">
             <AboutPortraitCard className="mx-auto max-w-md" />
           </div>
         </div>

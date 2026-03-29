@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { companyInfo } from "@/lib/site-content";
 
 export default function Vacatures() {
   return (
@@ -57,7 +58,7 @@ export default function Vacatures() {
                   variant="outline"
                   className="border-border text-foreground hover:bg-muted/50"
                 >
-                  <a href="mailto:hallo@wiolettajaros.nl">
+                  <a href={companyInfo.emailHref}>
                     Mail direct
                     <span className="ml-2">→</span>
                   </a>

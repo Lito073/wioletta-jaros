@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { companyInfo } from "@/lib/site-content";
 
 export function CareersTeaser() {
   return (
@@ -16,7 +17,7 @@ export function CareersTeaser() {
               </h2>
               <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
                 Bekijk openstaande vacatures of stuur een open sollicitatie als
-                er nu geen passende functie tussen staat.
+                er nu geen passende functie tussen staat via {companyInfo.email}.
               </p>
             </div>
 

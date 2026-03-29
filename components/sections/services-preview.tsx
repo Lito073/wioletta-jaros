@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { primaryCta, serviceHighlights } from "@/lib/site-content";
 import {
   Building2,
   Sparkles,
@@ -10,30 +11,25 @@ import {
 const services = [
   {
     icon: Building2,
-    title: "Kantoorschoonmaak",
-    description:
-      "Dagelijkse of periodieke schoonmaak van werkplekken, sanitair, gangen, kantines en entrees.",
+    ...serviceHighlights[0],
     href: "/diensten#kantoorschoonmaak",
   },
   {
     icon: Sparkles,
     title: "Vloeronderhoud & dieptereiniging",
-    description:
-      "Tapijt, PVC, linoleum en harde vloeren professioneel gereinigd en behandeld.",
+    description: serviceHighlights[1].shortDescription,
     href: "/diensten#vloeronderhoud",
   },
   {
     icon: Sun,
     title: "Glasbewassing",
-    description:
-      "Telewash buiten, Unger Stingray binnen — veilig, efficiënt en streeploos.",
+    description: serviceHighlights[2].shortDescription,
     href: "/diensten#glasbewassing",
   },
   {
     icon: HardHat,
     title: "Bouwschoonmaak",
-    description:
-      "Schoonmaak na bouw of renovatie, ook voor particulieren. Op aanvraag, geen lange wachttijden.",
+    description: serviceHighlights[3].shortDescription,
     href: "/diensten#bouwschoonmaak",
   },
 ];
@@ -72,7 +68,7 @@ export function ServicesPreview() {
                   {service.title}
                 </h3>
                 <p className="text-sm text-muted-foreground flex-grow">
-                  {service.description}
+                  {service.description ?? service.shortDescription}
                 </p>
 
                 {/* Link */}
@@ -92,8 +88,8 @@ export function ServicesPreview() {
             variant="outline"
             className="border-border text-foreground hover:bg-muted/50"
           >
-            <Link href="/diensten">
-              Bekijk alle diensten
+            <Link href={primaryCta.href}>
+              {primaryCta.shortLabel}
               <span className="ml-2">→</span>
             </Link>
           </Button>

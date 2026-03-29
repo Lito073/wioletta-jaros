@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { companyInfo } from "@/lib/site-content";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,11 +18,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     default:
-      "Wioletta Jaros Schoonmaakbedrijf | Professionele schoonmaak in Wijk en Aalburg en omgeving",
-    template: "%s | Wioletta Jaros Schoonmaakbedrijf",
+      `${companyInfo.shortName} Schoonmaakbedrijf | Professionele schoonmaak in Wijk en Aalburg en omgeving`,
+    template: `%s | ${companyInfo.shortName} Schoonmaakbedrijf`,
   },
   description:
-    "Wioletta Jaros Schoonmaakbedrijf V.O.F. - Professionele schoonmaakdiensten in Wijk en Aalburg, Hedel, Kerkdriel, Den Bosch, Waalwijk en Werkendam. Vaste teams, duidelijke prijzen en persoonlijke service.",
+    `${companyInfo.name} verzorgt professionele schoonmaakdiensten in ${companyInfo.serviceArea.join(", ")}. Vaste teams, duidelijke prijzen en persoonlijke service.`,
   keywords: [
     "schoonmaakbedrijf",
     "kantoorschoonmaak",
@@ -35,14 +36,13 @@ export const metadata: Metadata = {
     "Waalwijk",
     "Werkendam",
   ],
-  authors: [{ name: "Wioletta Jaros Schoonmaakbedrijf V.O.F." }],
+  authors: [{ name: companyInfo.name }],
   openGraph: {
     type: "website",
     locale: "nl_NL",
-    url: "https://wioletta-jaros.vercel.app",
-    siteName: "Wioletta Jaros Schoonmaakbedrijf",
+    siteName: companyInfo.shortName,
     title:
-      "Wioletta Jaros Schoonmaakbedrijf | Professionele schoonmaak in Wijk en Aalburg en omgeving",
+      `${companyInfo.shortName} Schoonmaakbedrijf | Professionele schoonmaak in Wijk en Aalburg en omgeving`,
     description:
       "Professionele schoonmaakdiensten in Wijk en Aalburg, Hedel, Kerkdriel, Den Bosch, Waalwijk en Werkendam.",
   },

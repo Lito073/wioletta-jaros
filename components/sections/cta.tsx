@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { primaryCta } from "@/lib/site-content";
 
 interface CTASectionProps {
   heading?: string;
@@ -11,8 +12,8 @@ interface CTASectionProps {
 export function CTASection({
   heading = "Klaar voor een schone werkomgeving?",
   subheading = "Vraag een vrijblijvende offerte aan. Binnen 24 uur ontvangt u een voorstel op maat.",
-  buttonText = "Offerte aanvragen",
-  buttonHref = "/contact",
+  buttonText = primaryCta.shortLabel,
+  buttonHref = primaryCta.href,
 }: CTASectionProps) {
   return (
     <section className="py-20 lg:py-28 bg-background">
