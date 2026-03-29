@@ -63,8 +63,14 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-3 focus:text-primary-foreground focus:shadow-lg"
+        >
+          Ga naar hoofdinhoud
+        </a>
         <Header />
-        <main className="flex-1 pt-20 md:pt-[8.8rem]">{children}</main>
+        <main id="main-content" className="flex-1 pt-20 md:pt-[8.8rem]">{children}</main>
         <Footer />
       </body>
     </html>

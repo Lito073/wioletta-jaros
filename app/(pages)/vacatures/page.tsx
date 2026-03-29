@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { companyInfo } from "@/lib/site-content";
+
+export const metadata: Metadata = {
+  title: "Vacatures",
+  description:
+    "Werk bij Wioletta Jaros Schoonmaakbedrijf. Bekijk openstaande vacatures of stuur een open sollicitatie voor schoonmaakwerk in regio Altena.",
+};
 
 export default function Vacatures() {
   return (
@@ -49,7 +56,7 @@ export default function Vacatures() {
                 <Button asChild size="lg">
                   <Link href="/contact">
                     Neem contact op
-                    <span className="ml-2">→</span>
+                    <span className="ml-2" aria-hidden="true">→</span>
                   </Link>
                 </Button>
                 <Button
@@ -60,7 +67,7 @@ export default function Vacatures() {
                 >
                   <a href={companyInfo.emailHref}>
                     Mail direct
-                    <span className="ml-2">→</span>
+                    <span className="ml-2" aria-hidden="true">→</span>
                   </a>
                 </Button>
               </div>

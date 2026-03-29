@@ -68,7 +68,7 @@ export function Header() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-white"
+              className="h-11 w-11 text-white"
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
               onClick={() => setIsOpen((open) => !open)}
@@ -92,6 +92,7 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  aria-current={isActive ? "page" : undefined}
                   className={`px-3 py-3 text-sm font-medium transition-colors duration-300 lg:px-4 ${
                     isActive
                       ? "font-semibold text-foreground"
@@ -132,7 +133,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-white"
+                className="h-11 w-11 text-white"
                 onClick={() => setIsOpen(false)}
               >
                 <X className="h-5 w-5" />
@@ -148,6 +149,7 @@ export function Header() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
+                    aria-current={isActive ? "page" : undefined}
                     className={`py-2 text-lg transition-colors duration-300 ${
                       isActive
                         ? "font-bold text-white underline underline-offset-4"

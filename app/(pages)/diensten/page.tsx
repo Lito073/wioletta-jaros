@@ -59,7 +59,7 @@ export default function Diensten() {
                       <Button asChild variant="outline" className="border-border text-foreground hover:bg-muted/50">
                         <Link href={primaryCta.href}>
                           Offerte voor deze dienst
-                          <ArrowRight className="ml-2 h-4 w-4" />
+                          <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                         </Link>
                       </Button>
                     </div>

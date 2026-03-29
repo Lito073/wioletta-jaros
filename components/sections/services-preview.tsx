@@ -55,6 +55,7 @@ export function ServicesPreview() {
             <Link
               key={service.title}
               href={service.href}
+              aria-label={`Meer informatie over ${service.title}`}
               className="group glass-card rounded-xl p-6 hover:border-foreground/20 transition-all duration-300"
             >
               <div className="flex flex-col h-full">
@@ -74,7 +75,7 @@ export function ServicesPreview() {
                 {/* Link */}
                 <span className="text-sm text-foreground mt-4 flex items-center gap-1 group-hover:gap-2 transition-all duration-300">
                   Meer lezen
-                  <span>→</span>
+                  <span aria-hidden="true">→</span>
                 </span>
               </div>
             </Link>
@@ -90,7 +91,7 @@ export function ServicesPreview() {
           >
             <Link href={primaryCta.href}>
               {primaryCta.shortLabel}
-              <span className="ml-2">→</span>
+              <span className="ml-2" aria-hidden="true">→</span>
             </Link>
           </Button>
         </div>

@@ -169,7 +169,7 @@ export default function OverOns() {
                   <Button asChild>
                     <Link href={primaryCta.href}>
                       {primaryCta.label}
-                      <span className="ml-2">→</span>
+                      <span className="ml-2" aria-hidden="true">→</span>
                     </Link>
                   </Button>
                 </div>

@@ -93,7 +93,7 @@ export function AboutPreview() {
             >
               <Link href={primaryCta.href}>
                 {primaryCta.shortLabel}
-                <span className="ml-2">→</span>
+                <span className="ml-2" aria-hidden="true">→</span>
               </Link>
             </Button>
           </div>

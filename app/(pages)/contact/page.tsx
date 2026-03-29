@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Building2, Mail, MapPin, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { companyInfo, primaryCta } from "@/lib/site-content";
 
 const requestChecklist = [
@@ -62,13 +63,12 @@ export default function Contact() {
                   gewenste dienst. Wij reageren zo snel mogelijk met een voorstel of
                   aanvullende vragen.
                 </p>
-                <a
-                  href={`${companyInfo.emailHref}?subject=Nieuwe offerteaanvraag`}
-                  className="mt-5 inline-flex items-center rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-                >
-                  {primaryCta.label}
-                  <span className="ml-2">→</span>
-                </a>
+                <Button asChild size="lg" className="mt-5 rounded-full">
+                  <a href={`${companyInfo.emailHref}?subject=Nieuwe offerteaanvraag`}>
+                    {primaryCta.label}
+                    <span className="ml-2" aria-hidden="true">→</span>
+                  </a>
+                </Button>
               </div>
             </section>
 

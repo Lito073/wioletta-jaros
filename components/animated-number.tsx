@@ -56,5 +56,9 @@ export function AnimatedNumber({
     return () => observer.disconnect();
   }, [durationMs, hasPlayed, value]);
 
-  return <span ref={elementRef}>{displayValue}</span>;
+  return (
+    <span ref={elementRef} role="status" aria-live="polite" aria-atomic="true">
+      {displayValue}
+    </span>
+  );
 }

@@ -28,7 +28,7 @@ export function CareersTeaser() {
             >
               <Link href="/vacatures">
                 Bekijk vacatures
-                <span className="ml-2">→</span>
+                <span className="ml-2" aria-hidden="true">→</span>
               </Link>
             </Button>
           </div>

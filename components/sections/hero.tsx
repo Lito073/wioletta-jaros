@@ -50,7 +50,7 @@ export function Hero() {
             >
               <Link href="/contact">
                 Vraag een vrijblijvende offerte aan
-                <span className="ml-2">→</span>
+                <span className="ml-2" aria-hidden="true">→</span>
               </Link>
             </Button>
             <Button
